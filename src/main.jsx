@@ -68,7 +68,7 @@ function parseQuickInput(text) {
 
 function App() {
   const [session, setSession] = useState(null)
-  const [email, setEmail] = useState('')
+  const [authLoading, setAuthLoading] = useState(false)
   const [authMsg, setAuthMsg] = useState('')
   const [tab, setTab] = useState('dashboard')
   const [teams, setTeams] = useState([])
@@ -90,11 +90,17 @@ function App() {
     loadData(session.user.id)
   }, [session])
 
-  async function signIn(e) {
-    e.preventDefault()
-    setAuthMsg('Enviando link...')
-    const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin } })
-    setAuthMsg(error ? error.message : 'Revisa tu correo para entrar.')
+  async function signInWithGitHub() {
+    setAuthLoading(true)
+    setAuthMsg('')
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'github',
+      options: { redirectTo: window.location.origin }
+    })
+    if (error) {
+      setAuthMsg(error.message)
+      setAuthLoading(false)
+    }
   }
 
   async function loadData(userId) {
@@ -190,18 +196,19 @@ function App() {
   }
 
   if (!session) {
-    return <div className="loginShell">
-      <div className="loginCard">
-        <div className="brand">FIFA<span>26</span></div>
-        <h1>Tracker de álbum</h1>
-        <p>Entra con tu correo para sincronizar tus faltantes y repetidas.</p>
-        <form onSubmit={signIn}>
-          <input value={email} onChange={e => setEmail(e.target.value)} placeholder="tu@email.com" type="email" required />
-          <button>Enviar link de acceso</button>
-        </form>
-        <small>{authMsg}</small>
+    return (
+      <div className="loginShell">
+        <div className="loginCard">
+          <div className="brand">FIFA<span>26</span></div>
+          <h1>Tracker de álbum</h1>
+          <p>Entra con GitHub para sincronizar tu álbum en todos tus dispositivos.</p>
+          <button onClick={signInWithGitHub} disabled={authLoading} style={{ marginTop: 8 }}>
+            {authLoading ? 'Redirigiendo...' : '🐙 Continuar con GitHub'}
+          </button>
+          {authMsg && <small style={{ color: '#e53935', marginTop: 8, display: 'block' }}>{authMsg}</small>}
+        </div>
       </div>
-    </div>
+    )
   }
 
   return <div className="appShell">
@@ -262,7 +269,7 @@ function App() {
 
       {!loading && tab === 'settings' && <section className="panel">
         <h1>Ajustes</h1>
-        <p>Usuario: {session.user.email}</p>
+        <p>Usuario: {session.user.user_metadata?.user_name || session.user.email}</p>
         <button className="primary" onClick={exportMissingPdf}><Share2 size={16}/> Exportar faltantes a PDF</button>
         <button onClick={() => supabase.auth.signOut()}>Cerrar sesión</button>
       </section>}
