@@ -232,7 +232,18 @@ function App() {
         <div className="countryHero">
           <button className="countryArrow" onClick={() => navigateTeam(-1)} aria-label="País anterior"><ArrowLeft size={22}/><span>Anterior</span></button>
           <div className="countryIdentity">
-            {stickerImage(crestSticker) ? <img src={stickerImage(crestSticker)} alt={`Escudo ${selectedTeam?.name}`} /> : <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>}
+            {crestSticker ? (
+              <button
+                type="button"
+                className={`crestSticker ${status[crestSticker.id]?.is_missing ? 'missing' : 'owned'}`}
+                onClick={() => upsertStatus(crestSticker, { is_missing: !Boolean(status[crestSticker.id]?.is_missing), duplicate_count: 0 })}
+                aria-label={`${crestSticker.code}: ${status[crestSticker.id]?.is_missing ? 'Marcar como tengo' : 'Marcar como falta'}`}
+              >
+                {stickerImage(crestSticker) ? <img src={stickerImage(crestSticker)} alt={`Figurita ${crestSticker.code} - escudo de ${selectedTeam?.name}`} /> : <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>}
+                <span className="crestCode">{crestSticker.code}</span>
+                <span className="crestState">{status[crestSticker.id]?.is_missing ? 'Falta' : 'Tengo'}</span>
+              </button>
+            ) : <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>}
             <div><h1>{selectedTeam?.name} <b>{selectedTeam?.code}</b></h1><p>{FLAGS[selectedTeam?.code] || '🏳️'} {teamStickers.length} figuritas</p></div>
           </div>
           <div className="countryMetrics">
