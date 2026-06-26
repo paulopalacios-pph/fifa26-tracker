@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, BookOpen, Check, ChevronRight, Home, ListX, LogO
 import jsPDF from 'jspdf'
 import { supabase } from './supabaseClient'
 import './styles.css'
+import { STICKER_ASSETS } from './stickerAssets'
 
 const TABS = [
   { id: 'dashboard', label: 'Dashboard', icon: Home },
@@ -80,7 +81,7 @@ function parseQuickInput(text) {
 }
 
 function stickerImage(sticker) {
-  return sticker?.image_url || sticker?.photo_url || sticker?.image || sticker?.asset_url || ''
+  return STICKER_ASSETS[sticker?.code] || sticker?.image_url || sticker?.photo_url || sticker?.image || sticker?.asset_url || ''
 }
 
 function App() {
@@ -143,8 +144,9 @@ function App() {
     if (!error && data) setStatus(prev => ({ ...prev, [sticker.id]: data }))
   }
 
-  const selectedIndex = Math.max(0, teams.findIndex(t => t.code === selectedTeamCode))
-  const selectedTeam = teams[selectedIndex] || teams[0]
+  const orderedTeams = useMemo(() => [...teams].sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0)), [teams])
+  const selectedIndex = Math.max(0, orderedTeams.findIndex(t => t.code === selectedTeamCode))
+  const selectedTeam = orderedTeams[selectedIndex] || orderedTeams[0]
   const teamStickers = stickers.filter(s => s.team_id === selectedTeam?.id).sort((a, b) => a.sticker_number - b.sticker_number)
   const missing = stickers.filter(s => status[s.id]?.is_missing)
   const duplicates = stickers.filter(s => (status[s.id]?.duplicate_count || 0) > 0)
@@ -162,9 +164,9 @@ function App() {
   }), [teams, stickers, status])
 
   function navigateTeam(delta) {
-    if (!teams.length) return
-    const next = (selectedIndex + delta + teams.length) % teams.length
-    setSelectedTeamCode(teams[next].code)
+    if (!orderedTeams.length) return
+    const next = (selectedIndex + delta + orderedTeams.length) % orderedTeams.length
+    setSelectedTeamCode(orderedTeams[next].code)
   }
 
   async function applyQuick(mode) {
@@ -224,7 +226,7 @@ function App() {
     <main className="content">
       {loading && <div className="panel">Cargando álbum...</div>}
 
-      {!loading && tab === 'dashboard' && <Dashboard percent={percent} haveCount={haveCount} missingCount={missing.length} totalDupes={totalDupes} teams={teamStats} openTeam={(code) => { setSelectedTeamCode(code); setTab('album') }} />}
+      {!loading && tab === 'dashboard' && <Dashboard percent={percent} haveCount={haveCount} missingCount={missing.length} totalDupes={totalDupes} teams={[...teamStats].sort((a,b)=>(a.sort_order||0)-(b.sort_order||0))} openTeam={(code) => { setSelectedTeamCode(code); setTab('album') }} />}
 
       {!loading && tab === 'album' && <section className="countryView">
         <div className="countryHero">
