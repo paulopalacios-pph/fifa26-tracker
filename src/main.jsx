@@ -165,9 +165,13 @@ function App() {
   const teamMissing = teamStickers.filter(s => status[s.id]?.is_missing).length
   const teamHave = teamStickers.length - teamMissing
   const crestSticker =
-  teamStickers.find(s => Number(s.sticker_number) === 1) ||
-  teamStickers.find(s => s.code === `${selectedTeam?.code}1`) ||
-  teamStickers[0]
+    teamStickers.find(s => Number(s.sticker_number) === 1) ||
+    teamStickers.find(s => String(s.code || '').trim().toUpperCase() === `${String(selectedTeam?.code || '').trim().toUpperCase()}1`) ||
+    teamStickers[0]
+
+  const crestCode = `${String(selectedTeam?.code || '').trim().toUpperCase()}1`
+  const crestImage = STICKER_ASSETS[crestCode] || stickerImage(crestSticker)
+
   const teamStats = useMemo(() => teams.map(team => {
     const rows = stickers.filter(s => s.team_id === team.id)
     const miss = rows.filter(s => status[s.id]?.is_missing).length
@@ -250,11 +254,19 @@ function App() {
                 onClick={() => upsertStatus(crestSticker, { is_missing: !Boolean(status[crestSticker.id]?.is_missing), duplicate_count: 0 })}
                 aria-label={`${crestSticker.code}: ${status[crestSticker.id]?.is_missing ? 'Marcar como tengo' : 'Marcar como falta'}`}
               >
-                {stickerImage(crestSticker) ? <img src={stickerImage(crestSticker)} alt={`Figurita ${crestSticker.code} - escudo de ${selectedTeam?.name}`} /> : <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>}
-                <span className="crestCode">{crestSticker.code}</span>
+                {crestImage ? (
+                  <img src={crestImage} alt={`Figurita ${crestCode} - escudo de ${selectedTeam?.name}`} />
+                ) : (
+                  <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>
+                )}
+                <span className="crestCode">{crestCode}</span>
                 <span className="crestState">{status[crestSticker.id]?.is_missing ? 'Falta' : 'Tengo'}</span>
               </button>
-            ) : <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>}
+            ) : (
+              <div className="crestFallback">
+                {crestImage ? <img src={crestImage} alt={`Escudo de ${selectedTeam?.name}`} /> : (FLAGS[selectedTeam?.code] || '🏳️')}
+              </div>
+            )}
             <div><h1>{selectedTeam?.name} <b>{selectedTeam?.code}</b></h1><p>{FLAGS[selectedTeam?.code] || '🏳️'} {teamStickers.length} figuritas</p></div>
           </div>
           <div className="countryMetrics">
@@ -264,7 +276,7 @@ function App() {
           <button className="countryArrow" onClick={() => navigateTeam(1)} aria-label="País siguiente"><ArrowRight size={22}/><span>Siguiente</span></button>
         </div>
 
-        <AlbumPage title="Página izquierda (1–10)" stickers={teamStickers.slice(0,10).filter(s => s.sticker_number !== 1)} status={status} onUpdate={upsertStatus}/>
+        <AlbumPage title="Página izquierda (1–10)" stickers={teamStickers.slice(0,10).filter(s => Number(s.sticker_number) !== 1)} status={status} onUpdate={upsertStatus}/>
         <AlbumPage title="Página derecha (11–20)" stickers={teamStickers.slice(10,20)} status={status} onUpdate={upsertStatus}/>
       </section>}
 
