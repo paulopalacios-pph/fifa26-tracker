@@ -19,8 +19,8 @@ const FLAGS = {
   ARG:'🇦🇷', POR:'🇵🇹', FRA:'🇫🇷', BRA:'🇧🇷', ESP:'🇪🇸', MEX:'🇲🇽', COL:'🇨🇴', ENG:'🏴', ECU:'🇪🇨',
   RSA:'🇿🇦', KOR:'🇰🇷', CZE:'🇨🇿', CAN:'🇨🇦', BIH:'🇧🇦', QAT:'🇶🇦', SUI:'🇨🇭', MAR:'🇲🇦', USA:'🇺🇸',
   PAR:'🇵🇾', AUS:'🇦🇺', TUR:'🇹🇷', GER:'🇩🇪', CUW:'🇨🇼', CIV:'🇨🇮', NED:'🇳🇱', JPN:'🇯🇵', SWE:'🇸🇪',
-  TUN:'🇹🇳', BEL:'🇧🇪', EGY:'🇪🇬', IRI:'🇮🇷', NZL:'🇳🇿', CPV:'🇨🇻', KSA:'🇸🇦', URU:'🇺🇾', SEN:'🇸🇳',
-  IRQ:'🇮🇶', NOR:'🇳🇴', DZA:'🇩🇿', AUT:'🇦🇹', JOR:'🇯🇴', COD:'🇨🇩', UZB:'🇺🇿', CRO:'🇭🇷', GHA:'🇬🇭', PAN:'🇵🇦'
+  TUN:'🇹🇳', BEL:'🇧🇪', EGY:'🇪🇬', IRN:'🇮🇷', NZL:'🇳🇿', CPV:'🇨🇻', KSA:'🇸🇦', URU:'🇺🇾', SEN:'🇸🇳',
+  IRQ:'🇮🇶', NOR:'🇳🇴', ALG:'🇩🇿', AUT:'🇦🇹', JOR:'🇯🇴', COD:'🇨🇩', UZB:'🇺🇿', CRO:'🇭🇷', GHA:'🇬🇭', PAN:'🇵🇦', HAI:'🇭🇹', SCO:'🏴󠁧󠁢󠁳󠁣󠁴󠁿'
 }
 
 function codeParts(code) {
@@ -89,7 +89,7 @@ function stickerImage(sticker) {
     sticker?.photo_url ||
     sticker?.image ||
     sticker?.asset_url ||
-    ''
+    (code ? `/stickers/${code}.jpg` : '')
   )
 }
 
