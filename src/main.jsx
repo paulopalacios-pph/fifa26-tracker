@@ -81,7 +81,16 @@ function parseQuickInput(text) {
 }
 
 function stickerImage(sticker) {
-  return STICKER_ASSETS[sticker?.code] || sticker?.image_url || sticker?.photo_url || sticker?.image || sticker?.asset_url || ''
+  const code = String(sticker?.code || '').trim().toUpperCase()
+
+  return (
+    STICKER_ASSETS[code] ||
+    sticker?.image_url ||
+    sticker?.photo_url ||
+    sticker?.image ||
+    sticker?.asset_url ||
+    ''
+  )
 }
 
 function App() {
