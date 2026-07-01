@@ -155,8 +155,10 @@ function App() {
   const totalDupes = duplicates.reduce((sum, s) => sum + (status[s.id]?.duplicate_count || 0), 0)
   const teamMissing = teamStickers.filter(s => status[s.id]?.is_missing).length
   const teamHave = teamStickers.length - teamMissing
-  const crestSticker = teamStickers.find(s => s.sticker_number === 1) || teamStickers[0]
-
+  const crestSticker =
+  teamStickers.find(s => Number(s.sticker_number) === 1) ||
+  teamStickers.find(s => s.code === `${selectedTeam?.code}1`) ||
+  teamStickers[0]
   const teamStats = useMemo(() => teams.map(team => {
     const rows = stickers.filter(s => s.team_id === team.id)
     const miss = rows.filter(s => status[s.id]?.is_missing).length
