@@ -80,58 +80,17 @@ function parseQuickInput(text) {
   return actions
 }
 
-function stickerCandidates(code) {
-  const c = String(code || '').trim().toUpperCase()
-  if (!c) return []
-  const m = c.match(/^([A-Z]+)(\d+)$/)
-  const list = []
-  if (m) {
-    const prefix = m[1]
-    const num = parseInt(m[2], 10)
-    const padded = String(num).padStart(2, '0')
-    // Prefer high-quality PNG uploads (zero-padded then plain) ...
-    list.push(`/stickers/${prefix}${padded}.png`)
-    list.push(`/stickers/${prefix}${num}.png`)
-    // ... then the mapped/legacy JPG, then remaining JPG variants
-    if (STICKER_ASSETS[c]) list.push(STICKER_ASSETS[c])
-    list.push(`/stickers/${prefix}${padded}.jpg`)
-    list.push(`/stickers/${prefix}${num}.jpg`)
-  } else {
-    if (STICKER_ASSETS[c]) list.push(STICKER_ASSETS[c])
-    list.push(`/stickers/${c}.png`)
-    list.push(`/stickers/${c}.jpg`)
-  }
-  // de-duplicate while preserving order
-  return list.filter((v, i) => v && list.indexOf(v) === i)
-}
-
 function stickerImage(sticker) {
   const code = String(sticker?.code || '').trim().toUpperCase()
-  const candidates = stickerCandidates(code)
 
   return (
-    candidates[0] ||
+    STICKER_ASSETS[code] ||
     sticker?.image_url ||
     sticker?.photo_url ||
     sticker?.image ||
     sticker?.asset_url ||
     (code ? `/stickers/${code}.jpg` : '')
   )
-}
-
-// onError handler: walk through the candidate list stored in data-fallbacks
-function handleStickerImgError(e) {
-  const el = e.currentTarget
-  let list = []
-  try { list = JSON.parse(el.getAttribute('data-fallbacks') || '[]') } catch { list = [] }
-  const idx = Number(el.getAttribute('data-fallback-idx') || '0')
-  const next = idx + 1
-  if (list[next]) {
-    el.setAttribute('data-fallback-idx', String(next))
-    el.src = list[next]
-  } else {
-    el.onerror = null
-  }
 }
 
 function App() {
@@ -296,7 +255,7 @@ function App() {
                 aria-label={`${crestSticker.code}: ${status[crestSticker.id]?.is_missing ? 'Marcar como tengo' : 'Marcar como falta'}`}
               >
                 {crestImage ? (
-                  <img src={crestImage} alt={`Figurita ${crestCode} - escudo de ${selectedTeam?.name}`} data-fallbacks={JSON.stringify(stickerCandidates(crestCode))} data-fallback-idx="0" onError={handleStickerImgError} />
+                  <img src={crestImage} alt={`Figurita ${crestCode} - escudo de ${selectedTeam?.name}`} />
                 ) : (
                   <div className="crestFallback">{FLAGS[selectedTeam?.code] || '🏳️'}</div>
                 )}
@@ -305,7 +264,7 @@ function App() {
               </button>
             ) : (
               <div className="crestFallback">
-                {crestImage ? <img src={crestImage} alt={`Escudo de ${selectedTeam?.name}`} data-fallbacks={JSON.stringify(stickerCandidates(crestCode))} data-fallback-idx="0" onError={handleStickerImgError} /> : (FLAGS[selectedTeam?.code] || '🏳️')}
+                {crestImage ? <img src={crestImage} alt={`Escudo de ${selectedTeam?.name}`} /> : (FLAGS[selectedTeam?.code] || '🏳️')}
               </div>
             )}
             <div><h1>{selectedTeam?.name} <b>{selectedTeam?.code}</b></h1><p>{FLAGS[selectedTeam?.code] || '🏳️'} {teamStickers.length} figuritas</p></div>
@@ -360,7 +319,7 @@ function StickerCard({ sticker, row, onUpdate }) {
   const missing = Boolean(row?.is_missing)
   const img = stickerImage(sticker)
   return <button className={`sticker ${missing ? 'missing' : 'owned'}`} onClick={() => onUpdate(sticker, { is_missing: !missing, duplicate_count: 0 })}>
-    <div className="stickerImage">{img ? <img src={img} alt={sticker.display_name || sticker.player_name || sticker.code} data-fallbacks={JSON.stringify(stickerCandidates(sticker?.code))} data-fallback-idx="0" onError={handleStickerImgError} /> : <div className="placeholder">{sticker.sticker_number}</div>}</div>
+    <div className="stickerImage">{img ? <img src={img} alt={sticker.display_name || sticker.player_name || sticker.code} /> : <div className="placeholder">{sticker.sticker_number}</div>}</div>
     <b>{sticker.code}</b><span>{sticker.display_name || sticker.player_name || 'Figurita'}</span>
     <em>{missing ? <><X size={12}/> Falta</> : <><Check size={12}/> Tengo</>}</em>
   </button>
