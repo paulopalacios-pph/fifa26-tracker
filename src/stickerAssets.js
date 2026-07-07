@@ -1,3 +1,5 @@
+const MISSING_STICKER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Crect width='360' height='480' fill='%23e8eef4'/%3E%3Ctext x='180' y='240' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' fill='%23566778'%3ESin foto%3C/text%3E%3C/svg%3E";
+
 export const STICKER_ASSETS = {
 // ALG — fotos reales validadas visualmente
 "ALG1": "/stickers/ALG01.jpg",
@@ -107,6 +109,37 @@ export const STICKER_ASSETS = {
 "CAN19": "/stickers/CAN03.png",
 "CAN20": "/stickers/CAN14.png",
 
+// CIV — material real disponible
+"CIV1": "/stickers/CIV1.jpg",
+
+// COD — material real validado por nombre impreso
+"COD1": "/stickers/COD1.jpg",
+"COD3": "/stickers/COD7.jpg",
+"COD5": MISSING_STICKER, // COD5.jpg contiene Meschack Elia, no Arthur Masuaku
+"COD6": "/stickers/COD3.jpg",
+"COD7": MISSING_STICKER, // COD7.jpg contiene Aaron Wan-Bissaka, no Joris Kayembe
+"COD8": "/stickers/COD8.jpg",
+"COD15": "/stickers/COD5.jpg",
+
+// CPV — material real disponible
+"CPV2": "/stickers/CPV2.jpg",
+
+// CRO — se descartan CRO3.jpg, CRO5.jpg y CRO8.jpg por pertenecer a otras selecciones
+"CRO3": MISSING_STICKER,
+"CRO4": "/stickers/CRO4.jpg",
+"CRO5": MISSING_STICKER,
+"CRO6": "/stickers/CRO6.jpg",
+"CRO8": "/stickers/CRO9.jpg",
+"CRO9": MISSING_STICKER, // CRO9.jpg contiene Kristijan Jakić, no Luka Modrić
+"CRO18": "/stickers/CRO18.jpg",
+
+// CUW — material real disponible
+"CUW1": "/stickers/CUW1.jpg",
+"CUW19": "/stickers/CUW19.jpg",
+
+// CZE — material real disponible
+"CZE1": "/stickers/CZE1.jpg",
+
 "BRA1": "/stickers/BRA01.png",
 "BRA2": "/stickers/BRA03.png",
 "BRA3": "/stickers/BRA04.png",
@@ -127,12 +160,6 @@ export const STICKER_ASSETS = {
 "BRA18": "/stickers/BRA15.png",
 "BRA19": "/stickers/BRA16.png",
 "BRA20": "/stickers/BRA17.png",
-"CIV1": "/stickers/CIV1.jpg",
-"COD1": "/stickers/COD1.jpg",
-"COD3": "/stickers/COD3.jpg",
-"COD5": "/stickers/COD5.jpg",
-"COD7": "/stickers/COD7.jpg",
-"COD8": "/stickers/COD8.jpg",
 "COL1": "/stickers/COL01.png",
 "COL2": "/stickers/COL04.png",
 "COL3": "/stickers/COL03.png",
@@ -153,17 +180,6 @@ export const STICKER_ASSETS = {
 "COL18": "/stickers/COL06.png",
 "COL19": "/stickers/COL08.png",
 "COL20": "/stickers/COL05.png",
-"CPV2": "/stickers/CPV2.jpg",
-"CRO3": "/stickers/CRO3.jpg",
-"CRO4": "/stickers/CRO4.jpg",
-"CRO5": "/stickers/CRO5.jpg",
-"CRO6": "/stickers/CRO6.jpg",
-"CRO8": "/stickers/CRO8.jpg",
-"CRO9": "/stickers/CRO9.jpg",
-"CRO18": "/stickers/CRO18.jpg",
-"CUW1": "/stickers/CUW1.jpg",
-"CUW19": "/stickers/CUW19.jpg",
-"CZE1": "/stickers/CZE1.jpg",
 "ECU1": "/stickers/ECU01.png",
 "ECU2": "/stickers/ECU03.png",
 "ECU3": "/stickers/ECU04.png",
