@@ -200,6 +200,7 @@ export const STICKER_ASSETS = {
 "ECU18": "/stickers/ECU07.png",
 "ECU19": "/stickers/ECU06.png",
 "ECU20": "/stickers/ECU05.png",
+// EGY — fotos reales validadas visualmente
 "EGY1": "/stickers/EGY1.jpg",
 "ENG1": "/stickers/ENG01.png",
 "ENG2": "/stickers/ENG03.png",
@@ -281,29 +282,46 @@ export const STICKER_ASSETS = {
 // SIN PNG DISPONIBLE - falta subir imagen para "GER18"
 // SIN PNG DISPONIBLE - falta subir imagen para "GER19"
 "GER20": "/stickers/GER08.png",
+// GHA — fotos reales validadas por nombre impreso
 "GHA1": "/stickers/GHA1.jpg",
 "GHA3": "/stickers/GHA3.jpg",
 "GHA8": "/stickers/GHA8.jpg",
-"GHA13": "/stickers/GHA13.jpg",
-"GHA17": "/stickers/GHA17.jpg",
-"GHA20": "/stickers/GHA20.jpg",
+"GHA9": "/stickers/GHA20.jpg",
+"GHA12": "/stickers/GHA17.jpg",
+"GHA13": MISSING_STICKER, // GHA13.jpg no permite confirmar el nombre impreso con suficiente confianza
+"GHA17": MISSING_STICKER, // GHA17.jpg contiene a Kamaldeen Sulemana, no a André Ayew
+"GHA20": MISSING_STICKER, // GHA20.jpg contiene a Abdul Issahaku Fatawu, no a Antoine Semenyo
+
+// HAI — material real validado
 "HAI1": "/stickers/HAI1.jpg",
+
+// IRN — material real validado
 "IRN1": "/stickers/IRN1.jpg",
+
+// IRQ — fotos reales validadas por nombre impreso
 "IRQ1": "/stickers/IRQ1.jpg",
-"IRQ2": "/stickers/IRQ2.jpg",
+"IRQ2": MISSING_STICKER, // IRQ2.jpg contiene a Youssef Amyn, no a Jalal Hassani
+"IRQ3": "/stickers/IRQ14.jpg",
 "IRQ4": "/stickers/IRQ4.jpg",
+"IRQ5": "/stickers/IRQ17.jpg",
 "IRQ7": "/stickers/IRQ7.jpg",
-"IRQ9": "/stickers/IRQ9.jpg",
-"IRQ14": "/stickers/IRQ14.jpg",
+"IRQ9": MISSING_STICKER, // IRQ9.jpg contiene a Marko Farji, no a Zidane Iqbal
+"IRQ14": "/stickers/IRQ2.jpg",
 "IRQ15": "/stickers/IRQ15.jpg",
-"IRQ16": "/stickers/IRQ16.jpg",
-"IRQ17": "/stickers/IRQ17.jpg",
+"IRQ16": "/stickers/IRQ9.jpg",
+"IRQ17": MISSING_STICKER, // IRQ17.jpg contiene a Akam Hashem, no a Osama Rashid
+"IRQ18": "/stickers/IRQ16.jpg",
+
+// JOR — fotos reales validadas por nombre impreso
 "JOR1": "/stickers/JOR1.jpg",
 "JOR7": "/stickers/JOR7.jpg",
-"JOR14": "/stickers/JOR14.jpg",
-"JOR15": "/stickers/JOR15.jpg",
-"JOR16": "/stickers/JOR16.jpg",
-"JOR20": "/stickers/JOR20.jpg",
+"JOR10": "/stickers/JOR20.jpg",
+"JOR12": "/stickers/JOR16.jpg",
+"JOR14": MISSING_STICKER, // JOR14.jpg contiene a Ali Olwan, no a Amer Jamous
+"JOR15": MISSING_STICKER, // JOR15.jpg contiene a Yazan Al-Naimat, no a Mousa Al-Taamari
+"JOR16": "/stickers/JOR15.jpg",
+"JOR18": "/stickers/JOR14.jpg",
+"JOR20": MISSING_STICKER, // JOR20.jpg contiene a Nizar Al-Rashdan, no a Ibrahim Sabra
 "JPN1": "/stickers/JPN01.png",
 "JPN2": "/stickers/JPN12.png",
 "JPN3": "/stickers/JPN13.png",
