@@ -5,6 +5,7 @@ import sharp from 'sharp'
 const prefixes = new Set(['CIV', 'COD', 'CPV', 'CRO', 'CUW', 'CZE'])
 const sourceDir = path.join(process.cwd(), 'public', 'stickers')
 const outputPath = path.join(process.cwd(), 'public', '_tmp-image-audit.json')
+const contactPath = path.join(process.cwd(), 'public', '_tmp-contact.jpg')
 
 function bitsToHex(bits) {
   let output = ''
@@ -58,6 +59,42 @@ const results = []
 for (const name of names) {
   results.push({ name, ...(await imageHashes(path.join(sourceDir, name))) })
 }
-
 fs.writeFileSync(outputPath, JSON.stringify(results, null, 2) + '\n', 'utf8')
-console.log(`Generated ${outputPath} with ${results.length} images.`)
+
+const cellWidth = 180
+const imageHeight = 240
+const labelHeight = 28
+const cellHeight = imageHeight + labelHeight
+const columns = 4
+const rows = Math.ceil(names.length / columns)
+const composites = []
+
+for (let index = 0; index < names.length; index += 1) {
+  const name = names[index]
+  const left = (index % columns) * cellWidth
+  const top = Math.floor(index / columns) * cellHeight
+  const image = await sharp(path.join(sourceDir, name))
+    .resize(cellWidth, imageHeight, { fit: 'contain', background: '#ffffff' })
+    .jpeg({ quality: 76 })
+    .toBuffer()
+  composites.push({ input: image, left, top })
+
+  const safeName = name.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  const label = Buffer.from(`<svg width="${cellWidth}" height="${labelHeight}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/><text x="90" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="black">${safeName}</text></svg>`)
+  composites.push({ input: label, left, top: top + imageHeight })
+}
+
+await sharp({ create: { width: columns * cellWidth, height: rows * cellHeight, channels: 3, background: '#d9d9d9' } })
+  .composite(composites)
+  .jpeg({ quality: 72, chromaSubsampling: '4:4:4' })
+  .toFile(contactPath)
+
+const contactBase64 = fs.readFileSync(contactPath).toString('base64')
+const chunkSize = 700
+const chunkCount = Math.ceil(contactBase64.length / chunkSize)
+console.log(`AUDIT_CONTACT_CHUNKS=${chunkCount}`)
+for (let index = 0; index < chunkCount; index += 1) {
+  const chunk = contactBase64.slice(index * chunkSize, (index + 1) * chunkSize)
+  console.log(`AUDIT_CONTACT_${String(index).padStart(3, '0')}=${chunk}`)
+}
+console.log(`Generated audit for ${results.length} images.`)
