@@ -1,6 +1,47 @@
+import { ASSET_TUR14 } from "./stickerAssetTUR14.js";
+import { ASSET_TUR15 } from "./stickerAssetTUR15.js";
+import { ASSET_TUR16 } from "./stickerAssetTUR16.js";
+import { ASSET_TUR17 } from "./stickerAssetTUR17.js";
+import { ASSET_TUR18 } from "./stickerAssetTUR18.js";
+import { ASSET_TUR19 } from "./stickerAssetTUR19.js";
+import { ASSET_TUR20 } from "./stickerAssetTUR20.js";
+
 const MISSING_STICKER = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Crect width='360' height='480' fill='%23e8eef4'/%3E%3Ctext x='180' y='240' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' fill='%23566778'%3ESin foto%3C/text%3E%3C/svg%3E";
 
 export const STICKER_ASSETS = {
+  ...ASSET_TUR14,
+  ...ASSET_TUR15,
+  ...ASSET_TUR16,
+  ...ASSET_TUR17,
+  ...ASSET_TUR18,
+  ...ASSET_TUR19,
+  ...ASSET_TUR20,
+
+// AUS — fotos del ZIP validadas por nombre impreso
+"AUS2": "/stickers/AUS2.jpg",
+"AUS4": "/stickers/AUS4.jpg",
+"AUS5": "/stickers/AUS5.jpg",
+"AUS6": "/stickers/AUS6.jpg",
+"AUS7": "/stickers/AUS7.jpg",
+"AUS8": "/stickers/AUS8.jpg",
+"AUS9": "/stickers/AUS9.jpg",
+"AUS10": "/stickers/AUS10.jpg",
+"AUS11": "/stickers/AUS11.jpg",
+"AUS14": "/stickers/AUS14.jpg",
+"AUS17": "/stickers/AUS17.jpg",
+"AUS18": "/stickers/AUS18.jpg",
+"AUS19": "/stickers/AUS19.jpg",
+
+// TUR — fotos del ZIP validadas por nombre impreso
+"TUR1": "/stickers/TUR1.jpg",
+"TUR2": "/stickers/TUR2.jpg",
+"TUR3": "/stickers/TUR3.jpg",
+"TUR4": "/stickers/TUR4.jpg",
+"TUR5": "/stickers/TUR5.jpg",
+"TUR6": "/stickers/TUR6.jpg",
+"TUR7": "/stickers/TUR7.jpg",
+"TUR9": "/stickers/TUR9.jpg",
+"TUR12": "/stickers/TUR12.jpg",
 // ALG — fotos reales validadas visualmente
 "ALG1": "/stickers/ALG01.jpg",
 "ALG2": "/stickers/ALG04.jpg",
