@@ -508,6 +508,7 @@ export const STICKER_ASSETS = {
 "RSA13": "/stickers/RSA13.png",
 "RSA14": "/stickers/RSA14.png",
 "RSA15": "/stickers/RSA15.png",
+// SCO — material real validado por nombre impreso
 "SCO1": "/stickers/SCO1.jpg",
 "SCO16": "/stickers/SCO16.jpg",
 "SEN1": "/stickers/SEN01.png",
@@ -530,19 +531,33 @@ export const STICKER_ASSETS = {
 "SEN18": "/stickers/SEN18.png",
 "SEN19": "/stickers/SEN19.png",
 "SEN20": "/stickers/SEN20.png",
+// SUI — material real validado
 "SUI1": "/stickers/SUI1.jpg",
+
+// SWE — material real validado
 "SWE1": "/stickers/SWE1.jpg",
+
+// TUN — material real validado
 "TUN1": "/stickers/TUN1.jpg",
+
+// URU — fotos reales validadas por nombre impreso
 "URU1": "/stickers/URU1.jpg",
 "URU3": "/stickers/URU3.jpg",
-"URU6": "/stickers/URU6.jpg",
-"URU7": "/stickers/URU7.jpg",
-"URU12": "/stickers/URU12.jpg",
-"URU14": "/stickers/URU14.jpg",
-"URU15": "/stickers/URU15.jpg",
-"URU17": "/stickers/URU17.jpg",
-"URU19": "/stickers/URU19.jpg",
-"URU20": "/stickers/URU20.jpg",
+"URU5": "/stickers/URU14.jpg",
+"URU6": MISSING_STICKER, // URU6.jpg contiene a Nahitan Nández, no a Sebastián Cáceres
+"URU7": MISSING_STICKER, // URU7.jpg contiene a Maxi Araújo, no a Mathías Olivera
+"URU8": "/stickers/URU12.jpg",
+"URU9": "/stickers/URU6.jpg",
+"URU10": "/stickers/URU17.jpg",
+"URU12": MISSING_STICKER, // URU12.jpg contiene a Guillermo Varela, no a Rodrigo Bentancur
+"URU14": "/stickers/URU15.jpg",
+"URU15": MISSING_STICKER, // URU15.jpg contiene a Manuel Ugarte, no a Nicolás de la Cruz
+"URU16": "/stickers/URU7.jpg",
+"URU17": MISSING_STICKER, // URU17.jpg contiene a Federico Valverde, no a Darwin Núñez
+"URU19": MISSING_STICKER, // URU19.jpg no pudo identificarse con suficiente confianza
+"URU20": MISSING_STICKER, // URU20.jpg no pudo identificarse con suficiente confianza
+
+// USA — material real validado
 "USA1": "/stickers/USA1.jpg",
 "UZB1": "/stickers/UZB1.jpg",
 "UZB3": "/stickers/UZB3.jpg",
