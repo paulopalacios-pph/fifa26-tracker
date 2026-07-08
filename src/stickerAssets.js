@@ -362,15 +362,19 @@ export const STICKER_ASSETS = {
 "KOR18": "/stickers/KOR12.png",
 "KOR19": "/stickers/KOR14.png",
 "KOR20": "/stickers/KOR11.png",
+// KSA — fotos reales validadas por nombre impreso
 "KSA1": "/stickers/KSA1.jpg",
-"KSA7": "/stickers/KSA7.jpg",
-"KSA8": "/stickers/KSA8.jpg",
+"KSA4": "/stickers/KSA8.jpg",
+"KSA7": MISSING_STICKER, // KSA7.jpg contiene a Abdullah Alkhaibari, no a Moteb Alharbi
+"KSA8": MISSING_STICKER, // KSA8.jpg contiene a Saud Abdulhamid, no a Hassan Altambakti
+"KSA9": "/stickers/KSA16.jpg",
+"KSA11": "/stickers/KSA7.jpg",
 "KSA14": "/stickers/KSA14.jpg",
 "KSA15": "/stickers/KSA15.jpg",
-"KSA16": "/stickers/KSA16.jpg",
-"KSA18": "/stickers/KSA18.jpg",
+"KSA16": "/stickers/KSA20.jpg",
+"KSA18": MISSING_STICKER, // KSA18.jpg contiene a Mohamed Amine Tougai (Argelia)
 "KSA19": "/stickers/KSA19.jpg",
-"KSA20": "/stickers/KSA20.jpg",
+"KSA20": MISSING_STICKER, // KSA20.jpg contiene a Salem Aldawsari, no a Abdullah Alhamdan
 "MAR1": "/stickers/MAR01.png",
 "MAR2": "/stickers/MAR14.png",
 // SIN PNG DISPONIBLE - falta subir imagen para "MAR3"
@@ -431,29 +435,41 @@ export const STICKER_ASSETS = {
 "NED18": "/stickers/NED05.png",
 "NED19": "/stickers/NED06.png",
 "NED20": "/stickers/NED20.png",
+// NOR — fotos reales validadas por nombre impreso
 "NOR1": "/stickers/NOR1.jpg",
-"NOR2": "/stickers/NOR2.jpg",
-"NOR3": "/stickers/NOR3.jpg",
-"NOR5": "/stickers/NOR5.jpg",
-"NOR8": "/stickers/NOR8.jpg",
-"NOR9": "/stickers/NOR9.jpg",
-"NOR11": "/stickers/NOR11.jpg",
+"NOR2": MISSING_STICKER, // NOR2.jpg contiene a Kristoffer Vassbakk Ajer, no a Ørjan Nyland
+"NOR3": "/stickers/NOR20.jpg",
+"NOR5": "/stickers/NOR2.jpg",
+"NOR6": "/stickers/NOR18.jpg",
+"NOR8": "/stickers/NOR19.jpg",
+"NOR9": "/stickers/NOR8.jpg",
+"NOR11": "/stickers/NOR3.jpg",
 "NOR12": "/stickers/NOR12.jpg",
-"NOR13": "/stickers/NOR13.jpg",
-"NOR15": "/stickers/NOR15.jpg",
-"NOR18": "/stickers/NOR18.jpg",
-"NOR19": "/stickers/NOR19.jpg",
-"NOR20": "/stickers/NOR20.jpg",
+"NOR13": MISSING_STICKER, // NOR13.jpg no pudo identificarse con suficiente confianza
+"NOR14": "/stickers/NOR11.jpg",
+"NOR15": MISSING_STICKER, // NOR15.jpg no pudo identificarse con suficiente confianza
+"NOR17": "/stickers/NOR5.jpg",
+"NOR18": MISSING_STICKER, // NOR18.jpg contiene a Marcus Holmgren Pedersen, no a Jørgen Strand Larsen
+"NOR19": MISSING_STICKER, // NOR19.jpg contiene a Torbjørn Heggem, no a Antonio Nusa
+"NOR20": MISSING_STICKER, // NOR20.jpg contiene a Julian Ryerson, no a Oscar Bobb
+
+// NZL — material real validado
 "NZL1": "/stickers/NZL1.jpg",
+
+// PAN — fotos reales validadas por nombre impreso
 "PAN1": "/stickers/PAN1.jpg",
-"PAN4": "/stickers/PAN4.jpg",
-"PAN7": "/stickers/PAN7.jpg",
+"PAN4": "/stickers/PAN7.jpg",
+"PAN6": "/stickers/PAN20.jpg",
+"PAN7": MISSING_STICKER, // PAN7.jpg contiene a Fidel Escobar, no a Eric Davis
+"PAN9": "/stickers/PAN4.jpg",
 "PAN10": "/stickers/PAN10.jpg",
 "PAN14": "/stickers/PAN14.jpg",
 "PAN15": "/stickers/PAN15.jpg",
-"PAN18": "/stickers/PAN18.jpg",
-"PAN19": "/stickers/PAN19.jpg",
-"PAN20": "/stickers/PAN20.jpg",
+"PAN18": MISSING_STICKER, // PAN18.jpg contiene a José Luis Rodríguez, no a Cecilio Waterman
+"PAN19": "/stickers/PAN18.jpg",
+"PAN20": "/stickers/PAN19.jpg",
+
+// PAR — material real validado
 "PAR1": "/stickers/PAR1.jpg",
 "POR1": "/stickers/POR01.png",
 "POR2": "/stickers/POR03.png",
@@ -475,6 +491,7 @@ export const STICKER_ASSETS = {
 "POR18": "/stickers/POR20.png",
 "POR19": "/stickers/POR19.png",
 "POR20": "/stickers/POR18.png",
+// QAT — material real validado
 "QAT5": "/stickers/QAT5.jpg",
 "RSA1": "/stickers/RSA01.png",
 "RSA2": "/stickers/RSA02.png",
