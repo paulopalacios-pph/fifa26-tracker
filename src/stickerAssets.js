@@ -493,21 +493,27 @@ export const STICKER_ASSETS = {
 "POR20": "/stickers/POR18.png",
 // QAT — material real validado
 "QAT5": "/stickers/QAT5.jpg",
+// RSA — fotos reales validadas por nombre impreso
 "RSA1": "/stickers/RSA01.png",
-"RSA2": "/stickers/RSA02.png",
+"RSA2": MISSING_STICKER, // RSA02.png no pudo identificarse con suficiente confianza
 "RSA3": "/stickers/RSA03.png",
-"RSA4": "/stickers/RSA04.png",
-"RSA5": "/stickers/RSA05.png",
-"RSA6": "/stickers/RSA06.png",
-"RSA7": "/stickers/RSA07.png",
-"RSA8": "/stickers/RSA08.png",
-"RSA9": "/stickers/RSA09.png",
-"RSA10": "/stickers/RSA10.png",
-"RSA11": "/stickers/RSA11.png",
-"RSA12": "/stickers/RSA12.png",
-"RSA13": "/stickers/RSA13.png",
-"RSA14": "/stickers/RSA14.png",
-"RSA15": "/stickers/RSA15.png",
+"RSA4": "/stickers/RSA14.png",
+"RSA5": "/stickers/RSA04.png",
+"RSA6": "/stickers/RSA15.png",
+"RSA7": MISSING_STICKER, // RSA07.png contiene a Thalente Mbatha, no a Khulumani Ndamane
+"RSA8": MISSING_STICKER, // RSA08.png contiene a Bathusi Aubaas, no a Siyabonga Ngezana
+"RSA9": "/stickers/RSA05.png",
+"RSA10": MISSING_STICKER, // RSA10.png contiene a Oswin Appollis, no a Nkosinathi Sibisi
+"RSA11": "/stickers/RSA06.png",
+"RSA12": "/stickers/RSA07.png",
+"RSA13": "/stickers/RSA13.jpg",
+"RSA14": "/stickers/RSA08.png",
+"RSA15": MISSING_STICKER, // RSA15.png contiene a Mbekezeli Mbokazi, no a Yaya Sithole
+"RSA16": "/stickers/RSA12.png",
+"RSA17": "/stickers/RSA11.png",
+"RSA18": "/stickers/RSA09.png",
+"RSA19": "/stickers/RSA13.png",
+"RSA20": "/stickers/RSA10.png",
 // SCO — material real validado por nombre impreso
 "SCO1": "/stickers/SCO1.jpg",
 "SCO16": "/stickers/SCO16.jpg",
@@ -559,13 +565,17 @@ export const STICKER_ASSETS = {
 
 // USA — material real validado
 "USA1": "/stickers/USA1.jpg",
+// UZB — fotos reales validadas por nombre impreso
 "UZB1": "/stickers/UZB1.jpg",
-"UZB3": "/stickers/UZB3.jpg",
-"UZB4": "/stickers/UZB4.jpg",
+"UZB3": "/stickers/UZB20.jpg",
+"UZB4": MISSING_STICKER, // UZB4.jpg contiene a Rustam Ashurmatov, no a Sherzod Nasrullaev
 "UZB5": "/stickers/UZB5.jpg",
+"UZB7": "/stickers/UZB4.jpg",
 "UZB8": "/stickers/UZB8.jpg",
-"UZB16": "/stickers/UZB16.jpg",
-"UZB17": "/stickers/UZB17.jpg",
-"UZB18": "/stickers/UZB18.jpg",
-"UZB20": "/stickers/UZB20.jpg"
+"UZB12": "/stickers/UZB16.jpg",
+"UZB15": "/stickers/UZB3.jpg",
+"UZB16": MISSING_STICKER, // UZB16.jpg contiene a Jamshid Iskanderov, no a Eldor Shomurodov
+"UZB17": MISSING_STICKER, // UZB17.jpg contiene a Jaloliddin Masharipov, no a Oston Urunov
+"UZB18": "/stickers/UZB17.jpg",
+"UZB20": "/stickers/UZB18.jpg"
 }
