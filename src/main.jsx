@@ -276,8 +276,8 @@ function App() {
           <button className="countryArrow" onClick={() => navigateTeam(1)} aria-label="País siguiente"><ArrowRight size={22}/><span>Siguiente</span></button>
         </div>
 
-        <AlbumPage title="Página izquierda (1–10)" stickers={teamStickers.slice(0,10).filter(s => Number(s.sticker_number) !== 1)} status={status} onUpdate={upsertStatus}/>
-        <AlbumPage title="Página derecha (11–20)" stickers={teamStickers.slice(10,20)} status={status} onUpdate={upsertStatus}/>
+        <AlbumPage title="Página izquierda (1–8)" stickers={teamStickers.filter(s => Number(s.sticker_number) >= 2 && Number(s.sticker_number) <= 8)} status={status} onUpdate={upsertStatus}/>
+        <AlbumPage title="Página derecha (9–20)" stickers={teamStickers.filter(s => Number(s.sticker_number) >= 9 && Number(s.sticker_number) <= 20)} status={status} onUpdate={upsertStatus}/>
       </section>}
 
       {!loading && tab === 'quick' && <section className="panel"><h1>Carga rápida</h1><p>Ejemplos: <b>MEX 2,5,7-9</b> o <b>ARG 3x2,10x3</b></p><textarea value={quickText} onChange={e => setQuickText(e.target.value)} placeholder={'MEX 2,5,7-9\nARG 3x2,10x3'} /><button className="danger" onClick={() => applyQuick('missing')}>Marcar faltantes</button><button className="primary" onClick={() => applyQuick('duplicate')}>Registrar repetidas</button></section>}
