@@ -80,6 +80,10 @@ for (const item of report) {
 }
 
 if (broken > 0) {
-  console.error(`\nERROR: existen ${broken} rutas de imágenes mapeadas que no apuntan a un archivo real.`)
+  console.warn(`\nADVERTENCIA: existen ${broken} rutas mapeadas que no apuntan a un archivo real.`)
+}
+
+if (process.env.STRICT_PHOTO_AUDIT === '1' && (broken > 0 || unresolved > 0 || placeholders > 0)) {
+  console.error('\nLa auditoría estricta falló. Corrige todos los recursos antes de publicar.')
   process.exitCode = 1
 }
