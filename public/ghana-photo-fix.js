@@ -2,7 +2,7 @@
   // Ghana: imágenes extraídas y verificadas visualmente contra código + nombre.
   // row0: GHA1, GHA2, GHA5, GHA6
   // row1: GHA7, GHA8, GHA9, GHA10
-  // Los códigos restantes se dejan sin foto para impedir asociaciones incorrectas.
+  // row2: GHA12, GHA14, GHA16, GHA20
   const CELLS = {
     GHA1: ['/ghana/row0.b64', 0],
     GHA2: ['/ghana/row0.b64', 1],
@@ -11,11 +11,13 @@
     GHA7: ['/ghana/row1.b64', 0],
     GHA8: ['/ghana/row1.b64', 1],
     GHA9: ['/ghana/row1.b64', 2],
-    GHA10: ['/ghana/row1.b64', 3]
+    GHA10: ['/ghana/row1.b64', 3],
+    GHA12: ['/ghana/row2.b64', 0],
+    GHA14: ['/ghana/row2.b64', 1],
+    GHA16: ['/ghana/row2.b64', 2],
+    GHA20: ['/ghana/row2.b64', 3]
   };
 
-  const BLOCKED = new Set(['GHA12', 'GHA14', 'GHA16', 'GHA20']);
-  const MISSING = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Crect width='360' height='480' fill='%23e8eef4'/%3E%3Ctext x='180' y='225' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' fill='%23566778'%3ESin foto%3C/text%3E%3Ctext x='180' y='265' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' fill='%23748698'%3Ependiente de validar%3C/text%3E%3C/svg%3E";
   const sourcePromises = new Map();
   const crops = new Map();
 
@@ -51,7 +53,6 @@
   }
 
   async function srcFor(code) {
-    if (BLOCKED.has(code)) return MISSING;
     if (crops.has(code)) return crops.get(code);
     const cell = CELLS[code];
     if (!cell) return null;
@@ -66,7 +67,7 @@
     for (const card of cards) {
       const code = (card.querySelector('b')?.textContent || '').trim().toUpperCase();
       const img = card.querySelector('.stickerImage img');
-      if (!img || (!CELLS[code] && !BLOCKED.has(code)) || img.dataset.verifiedGhana === 'true') continue;
+      if (!img || !CELLS[code] || img.dataset.verifiedGhana === 'true') continue;
       const src = await srcFor(code);
       if (src) {
         img.src = src;
