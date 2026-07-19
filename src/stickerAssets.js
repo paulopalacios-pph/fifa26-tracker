@@ -563,8 +563,27 @@ export const STICKER_ASSETS = {
 "POR18": "/stickers/POR20.png",
 "POR19": "/stickers/POR19.png",
 "POR20": "/stickers/POR18.png",
-// QAT — material real validado
-"QAT5": "/stickers/QAT5.jpg",
+// QAT — PDF oficial Panini 2026, pág. 10. Solo láminas completas; null = sin lámina (tarjeta con código).
+"QAT1": "/qatar/QAT1.png", // Qatar Crest (escudo QFA)
+"QAT2": "/qatar/QAT2.png", // Meshaal Barsham
+"QAT3": "/qatar/QAT3.png", // Sultan Albrake
+"QAT4": null, // Lucas Mendes — sin lámina
+"QAT5": null, // Homam Ahmed — sin lámina (desmapeado QAT5.jpg de internet)
+"QAT6": "/qatar/QAT6.png", // Boualem Khoukhi
+"QAT7": "/qatar/QAT7.png", // Pedro Miguel
+"QAT8": null, // Tarek Salman — sin lámina
+"QAT9": "/qatar/QAT9.png", // Mohammed Mannai
+"QAT10": "/qatar/QAT10.png", // Karim Boudiaf
+"QAT11": "/qatar/QAT11.png", // Assim Madibo
+"QAT12": null, // Hamed Fatehi — sin lámina
+"QAT13": null, // Foto selección Qatar — sin lámina
+"QAT14": null, // Mohammed Waad — sin lámina
+"QAT15": null, // Abdulaziz Hatem — sin lámina
+"QAT16": null, // Hassan Al-Haydos — sin lámina
+"QAT17": "/qatar/QAT17.png", // Edmílson Junior
+"QAT18": "/qatar/QAT18.png", // Akram Hassan Afif
+"QAT19": "/qatar/QAT19.png", // Ahmed Al-Ganehi
+"QAT20": "/qatar/QAT20.png", // Almoez Ali
 // RSA — fotos reales validadas por nombre impreso
 "RSA1": "/stickers/RSA01.png",
 "RSA2": MISSING_STICKER, // RSA02.png no pudo identificarse con suficiente confianza
