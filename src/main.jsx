@@ -83,14 +83,11 @@ function parseQuickInput(text) {
 function stickerImage(sticker) {
   const code = String(sticker?.code || '').trim().toUpperCase()
 
-  return (
-    STICKER_ASSETS[code] ||
-    sticker?.image_url ||
-    sticker?.photo_url ||
-    sticker?.image ||
-    sticker?.asset_url ||
-    (code ? `/stickers/${code}.jpg` : '')
-  )
+  if (Object.prototype.hasOwnProperty.call(STICKER_ASSETS, code)) {
+    return STICKER_ASSETS[code]
+  }
+
+  return code ? `/stickers/${code}.jpg` : null
 }
 
 function App() {
@@ -318,8 +315,10 @@ function AlbumPage({ title, stickers, status, onUpdate }) {
 function StickerCard({ sticker, row, onUpdate }) {
   const missing = Boolean(row?.is_missing)
   const img = stickerImage(sticker)
+  const [imageFailed, setImageFailed] = useState(false)
+  const showImage = Boolean(img && !imageFailed)
   return <button className={`sticker ${missing ? 'missing' : 'owned'}`} onClick={() => onUpdate(sticker, { is_missing: !missing, duplicate_count: 0 })}>
-    <div className="stickerImage">{img ? <img src={img} alt={sticker.display_name || sticker.player_name || sticker.code} /> : <div className="placeholder">{sticker.sticker_number}</div>}</div>
+    <div className="stickerImage">{showImage ? <img src={img} onError={() => setImageFailed(true)} alt={sticker.display_name || sticker.player_name || sticker.code} /> : <div className="placeholder">{sticker.code}</div>}</div>
     <b>{sticker.code}</b><span>{sticker.display_name || sticker.player_name || 'Figurita'}</span>
     <em>{missing ? <><X size={12}/> Falta</> : <><Check size={12}/> Tengo</>}</em>
   </button>
