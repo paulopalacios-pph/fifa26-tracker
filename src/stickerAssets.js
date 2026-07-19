@@ -100,23 +100,27 @@ export const STICKER_ASSETS = {
 "AUT18": "/stickers/AUT03.png",
 "AUT19": "/stickers/AUT02.png",
 
-// BEL — fotos reales validadas visualmente
-"BEL1": "/stickers/BEL01.png",
-"BEL3": "/stickers/BEL04.png",
-"BEL4": "/stickers/BEL10.png",
-"BEL5": "/stickers/BEL07.png",
-"BEL6": "/stickers/BEL03.png",
-"BEL7": "/stickers/BEL12.png",
-"BEL8": "/stickers/BEL09.png",
-"BEL9": "/stickers/BEL08.png",
-"BEL10": "/stickers/BEL05.png",
-"BEL11": "/stickers/BEL14.png",
-"BEL12": "/stickers/BEL06.png",
-"BEL14": "/stickers/BEL02.png",
-"BEL15": "/stickers/BEL16.png",
-"BEL16": "/stickers/BEL15.png",
-"BEL19": "/stickers/BEL13.png",
-"BEL20": "/stickers/BEL11.png",
+// BEL — fotos reales validadas visualmente (álbum, 16 láminas). null = sin lámina.
+"BEL1": "/belgium/BEL01.png", // Belgium Crest
+"BEL2": null, // Thibaut Courtois — sin lámina
+"BEL3": "/belgium/BEL04.png", // Arthur Theate
+"BEL4": "/belgium/BEL10.png", // Timothy Castagne
+"BEL5": "/belgium/BEL07.png", // Zeno Debast
+"BEL6": "/belgium/BEL03.png", // Brandon Mechele
+"BEL7": "/belgium/BEL12.png", // Maxim De Cuyper
+"BEL8": "/belgium/BEL09.png", // Thomas Meunier
+"BEL9": "/belgium/BEL08.png", // Youri Tielemans
+"BEL10": "/belgium/BEL05.png", // Amadou Onana
+"BEL11": "/belgium/BEL14.png", // Nicolas Raskin
+"BEL12": "/belgium/BEL06.png", // Alexis Saelemaekers
+"BEL13": null, // Belgium (foto selección) — sin lámina
+"BEL14": "/belgium/BEL02.png", // Hans Vanaken
+"BEL15": "/belgium/BEL16.png", // Kevin De Bruyne
+"BEL16": "/belgium/BEL15.png", // Jérémy Doku
+"BEL17": null, // Charles De Ketelaere — sin lámina
+"BEL18": null, // Leandro Trossard — sin lámina
+"BEL19": "/belgium/BEL13.png", // Loïs Openda
+"BEL20": "/belgium/BEL11.png", // Romelu Lukaku
 
 // BIH — sólo tarjetas del PDF; null muestra el código sin foto externa
 "BIH1": "/bosnia/BIH1.png",
