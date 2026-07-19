@@ -42,23 +42,27 @@ export const STICKER_ASSETS = {
 "TUR7": "/stickers/TUR7.jpg",
 "TUR9": "/stickers/TUR9.jpg",
 "TUR12": "/stickers/TUR12.jpg",
-// ALG — fotos reales validadas visualmente
-"ALG1": "/stickers/ALG01.jpg",
-"ALG2": "/stickers/ALG04.jpg",
-"ALG3": "/stickers/ALG09.jpg",
-"ALG4": "/stickers/ALG11.jpg",
-"ALG5": "/stickers/ALG15.jpg",
-"ALG8": "/stickers/ALG05.jpg",
-"ALG9": "/stickers/ALG16.jpg",
-"ALG10": "/stickers/ALG02.jpg",
-"ALG11": "/stickers/ALG07.jpg",
-"ALG12": "/stickers/ALG14.jpg",
-"ALG14": "/stickers/ALG03.jpg",
-"ALG15": "/stickers/ALG10.jpg",
-"ALG16": "/stickers/ALG13.jpg",
-"ALG17": "/stickers/ALG06.jpg",
-"ALG18": "/stickers/ALG12.jpg",
-"ALG19": "/stickers/ALG08.jpg",
+// ALG — fotos reales validadas visualmente (álbum, 16 láminas). null = sin lámina.
+"ALG1": "/algeria/ALG01.jpg", // Algeria Crest
+"ALG2": "/algeria/ALG04.jpg", // Alexis Guendouz
+"ALG3": "/algeria/ALG09.jpg", // Ramy Bensebaini
+"ALG4": "/algeria/ALG11.jpg", // Youcef Atal
+"ALG5": "/algeria/ALG15.jpg", // Rayan Aït-Nouri
+"ALG6": null, // Mohamed Amine — sin lámina
+"ALG7": null, // Aïssa Mandi — sin lámina
+"ALG8": "/algeria/ALG05.jpg", // Ismaël Bennacer
+"ALG9": "/algeria/ALG16.jpg", // Houssem Aouar
+"ALG10": "/algeria/ALG02.jpg", // Hicham Boudaoui
+"ALG11": "/algeria/ALG07.jpg", // Ramiz Zerrouki
+"ALG12": "/algeria/ALG14.jpg", // Nabil Bentaleb
+"ALG13": null, // Algeria (foto selección) — sin lámina
+"ALG14": "/algeria/ALG03.jpg", // Farès Chaïbi
+"ALG15": "/algeria/ALG10.jpg", // Riyad Mahrez
+"ALG16": "/algeria/ALG13.jpg", // Saïd Benrahma
+"ALG17": "/algeria/ALG06.jpg", // Anis Hadj Moussa
+"ALG18": "/algeria/ALG12.jpg", // Amine Gouiri
+"ALG19": "/algeria/ALG08.jpg", // Baghdad Bounedjah
+"ALG20": null, // Mohammed Amoura — sin lámina
 
 // ARG — fotos reales validadas visualmente
 "ARG1": "/stickers/ARG1.jpg",
