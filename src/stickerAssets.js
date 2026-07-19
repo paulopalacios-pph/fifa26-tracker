@@ -178,8 +178,27 @@ export const STICKER_ASSETS = {
 "CUW1": "/stickers/CUW1.jpg",
 "CUW19": "/stickers/CUW19.jpg",
 
-// CZE — material real disponible
+// CZE — tarjetas del PDF y retratos oficiales de FAČR validados por jugador
 "CZE1": "/stickers/CZE1.jpg",
+"CZE2": "/czechia/CZE2.png",
+"CZE3": "/czechia/CZE3.jpg",
+"CZE4": "/czechia/CZE4.png",
+"CZE5": "/czechia/CZE5.png",
+"CZE6": "/czechia/CZE6.png",
+"CZE7": "/czechia/CZE7.jpg",
+"CZE8": "/czechia/CZE8.jpg",
+"CZE9": "/czechia/CZE9.jpg",
+"CZE10": "/czechia/CZE10.png",
+"CZE11": "/czechia/CZE11.png",
+"CZE12": "/czechia/CZE12.png",
+"CZE13": "/czechia/CZE13.jpg",
+"CZE14": "/czechia/CZE14.png",
+"CZE15": "/czechia/CZE15.jpg",
+"CZE16": "/czechia/CZE16.jpg",
+"CZE17": "/czechia/CZE17.jpg",
+"CZE18": "/czechia/CZE18.png",
+"CZE19": "/czechia/CZE19.png",
+"CZE20": "/czechia/CZE20.png",
 
 "BRA1": "/stickers/BRA01.png",
 "BRA2": "/stickers/BRA03.png",
