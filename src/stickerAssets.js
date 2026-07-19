@@ -390,16 +390,16 @@ export const STICKER_ASSETS = {
 "KOR5": "/stickers/KOR09.png",
 "KOR6": "/stickers/KOR03.png",
 "KOR7": "/stickers/KOR13.png",
-// SIN PNG DISPONIBLE - falta subir imagen para "KOR8"
+"KOR8": "/korea/KOR8.jpg",
 "KOR9": "/stickers/KOR05.png",
 "KOR10": "/stickers/KOR10.png",
 "KOR11": "/korea/KOR11.png",
 "KOR12": "/stickers/KOR06.png",
-// SIN PNG DISPONIBLE - falta subir imagen para "KOR13"
+"KOR13": "/korea/KOR13.jpg",
 "KOR14": "/stickers/KOR08.png",
 "KOR15": "/stickers/KOR07.png",
-// SIN PNG DISPONIBLE - falta subir imagen para "KOR16"
-// SIN PNG DISPONIBLE - falta subir imagen para "KOR17"
+"KOR16": "/korea/KOR16.jpg",
+"KOR17": "/korea/KOR17.jpg",
 "KOR18": "/stickers/KOR12.png",
 "KOR19": "/stickers/KOR14.png",
 "KOR20": "/stickers/KOR11.png",
