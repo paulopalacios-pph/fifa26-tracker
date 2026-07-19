@@ -33,7 +33,14 @@ for (const team of TEAM_CODES) {
 
   for (let number = 1; number <= 20; number += 1) {
     const code = `${team}${number}`
+    const hasMapping = Object.prototype.hasOwnProperty.call(STICKER_ASSETS, code)
     const mapped = STICKER_ASSETS[code]
+
+    if (hasMapping && mapped === null) {
+      teamReport.placeholders.push(code)
+      placeholders += 1
+      continue
+    }
 
     if (mapped) {
       if (isMissingPlaceholder(mapped)) {

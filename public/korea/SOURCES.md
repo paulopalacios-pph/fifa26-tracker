@@ -1,16 +1,8 @@
-# South Korea photo sources
+# Imágenes de Corea del Sur
 
-Verified on 2026-07-19.
+Política aplicada el 19 de julio de 2026: la app sólo muestra imágenes
+originales del álbum de referencia.
 
-- KOR8 - Lee Taeseok: KFA men's national team player list
-  - https://www.kfa.or.kr/national/?national=men
-  - https://files.joinkfa.com/NAT/2025/PHOTO/S/%EC%82%AC%EC%A7%84_202511031723153561.jpg
-- KOR13 - South Korea team: KFA national team news
-  - https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&div_code=news&idx=27569
-  - https://img.kfa.or.kr/bbs/news/total_news_11314/_1762146271_1469815896.jpg
-- KOR16 - Lee Donggyeong: KFA men's national team player list
-  - https://www.kfa.or.kr/national/?national=men
-  - https://files.joinkfa.com/NAT/2026/PHOTO/S/%EC%82%AC%EC%A7%84_2026052512415110274.jpg
-- KOR17 - Cho Guesung: KFA men's national team player list
-  - https://www.kfa.or.kr/national/?national=men
-  - https://files.joinkfa.com/NAT/2025/PHOTO/S/%EC%82%AC%EC%A7%84_2025110317280971085.jpg
+KOR8, KOR13, KOR16 y KOR17 no tienen una tarjeta completa disponible en el
+PDF. Se muestran intencionalmente como tarjetas azules/grises con su código,
+sin usar fotografías externas.
