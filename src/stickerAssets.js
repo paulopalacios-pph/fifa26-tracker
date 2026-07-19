@@ -640,8 +640,27 @@ export const STICKER_ASSETS = {
 "SEN18": "/stickers/SEN18.png",
 "SEN19": "/stickers/SEN19.png",
 "SEN20": "/stickers/SEN20.png",
-// SUI — material real validado
-"SUI1": "/stickers/SUI1.jpg",
+// SUI — fotos reales validadas por nombre impreso (álbum, 16 láminas). null = sin lámina.
+"SUI1": "/switzerland/SUI01.jpg", // Switzerland Crest
+"SUI2": "/switzerland/SUI02.jpg", // Gregor Kobel
+"SUI3": null, // Yvon Mvogo — sin lámina
+"SUI4": "/switzerland/SUI10.jpg", // Manuel Akanji
+"SUI5": "/switzerland/SUI03.jpg", // Ricardo Rodríguez
+"SUI6": "/switzerland/SUI13.jpg", // Nico Elvedi
+"SUI7": "/switzerland/SUI08.jpg", // Aurèle Amenda
+"SUI8": "/switzerland/SUI16.jpg", // Silvan Widmer
+"SUI9": "/switzerland/SUI06.jpg", // Granit Xhaka
+"SUI10": "/switzerland/SUI09.jpg", // Denis Zakaria
+"SUI11": "/switzerland/SUI14.jpg", // Remo Freuler
+"SUI12": "/switzerland/SUI07.jpg", // Fabian Rieder
+"SUI13": null, // Switzerland (foto selección) — sin lámina
+"SUI14": null, // Ardon Jashari — sin lámina
+"SUI15": "/switzerland/SUI12.jpg", // Johan Manzambi
+"SUI16": "/switzerland/SUI04.jpg", // Michel Aebischer
+"SUI17": null, // Breel Embolo — sin lámina
+"SUI18": "/switzerland/SUI05.jpg", // Rubén Vargas
+"SUI19": "/switzerland/SUI11.jpg", // Dan Ndoye
+"SUI20": "/switzerland/SUI15.jpg", // Zeki Amdouni
 
 // SWE — material real validado
 "SWE1": "/stickers/SWE1.jpg",
