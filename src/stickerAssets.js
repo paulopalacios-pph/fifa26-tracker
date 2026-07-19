@@ -82,23 +82,27 @@ export const STICKER_ASSETS = {
 "ARG19": "/stickers/ARG19.jpg",
 "ARG20": "/stickers/ARG20.jpg",
 
-// AUT — fotos reales validadas visualmente
-"AUT1": "/stickers/AUT01.png",
-"AUT2": "/stickers/AUT07.png",
-"AUT3": "/stickers/AUT12.png",
-"AUT4": "/stickers/AUT05.png",
-"AUT5": "/stickers/AUT06.png",
-"AUT6": "/stickers/AUT10.png",
-"AUT7": "/stickers/AUT16.png",
-"AUT9": "/stickers/AUT08.png",
-"AUT10": "/stickers/AUT11.png",
-"AUT11": "/stickers/AUT04.png",
-"AUT12": "/stickers/AUT09.png",
-"AUT15": "/stickers/AUT13.png",
-"AUT16": "/stickers/AUT14.png",
-"AUT17": "/stickers/AUT15.png",
-"AUT18": "/stickers/AUT03.png",
-"AUT19": "/stickers/AUT02.png",
+// AUT — fotos reales validadas visualmente (álbum, 16 láminas). null = sin lámina.
+"AUT1": "/austria/AUT01.png", // Austria Crest
+"AUT2": "/austria/AUT07.png", // Alexander Schlager
+"AUT3": "/austria/AUT12.png", // Patrick Pentz
+"AUT4": "/austria/AUT05.png", // David Alaba
+"AUT5": "/austria/AUT06.png", // Kevin Danso
+"AUT6": "/austria/AUT10.png", // Philipp Lienhart
+"AUT7": "/austria/AUT16.png", // Stefan Posch
+"AUT8": null, // Philipp Mwene — sin lámina
+"AUT9": "/austria/AUT08.png", // Alexander Prass
+"AUT10": "/austria/AUT11.png", // Xaver Schlager
+"AUT11": "/austria/AUT04.png", // Marcel Sabitzer
+"AUT12": "/austria/AUT09.png", // Konrad Laimer
+"AUT13": null, // Austria (foto selección) — sin lámina
+"AUT14": null, // Florian Grillitsch — sin lámina
+"AUT15": "/austria/AUT13.png", // Nicolas Seiwald
+"AUT16": "/austria/AUT14.png", // Romano Schmid
+"AUT17": "/austria/AUT15.png", // Patrick Wimmer
+"AUT18": "/austria/AUT03.png", // Christoph Baumgartner
+"AUT19": "/austria/AUT02.png", // Michael Gregoritsch
+"AUT20": null, // Marko Arnautović — sin lámina
 
 // BEL — fotos reales validadas visualmente
 "BEL1": "/stickers/BEL01.png",
