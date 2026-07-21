@@ -1,0 +1,11 @@
+# Dependencias y build
+node_modules/
+dist/
+package-lock.json
+
+# macOS / iCloud
+.DS_Store
+**/.DS_Store
+
+# Duplicados que crea iCloud al sincronizar (" 2", " 3", ...)
+* [0-9].*
