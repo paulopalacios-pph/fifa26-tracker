@@ -376,8 +376,27 @@ export const STICKER_ASSETS = {
 "GHA17": MISSING_STICKER, // GHA17.jpg contiene a Kamaldeen Sulemana, no a André Ayew
 "GHA20": MISSING_STICKER, // GHA20.jpg contiene a Abdul Issahaku Fatawu, no a Antoine Semenyo
 
-// HAI — material real validado
-"HAI1": "/stickers/HAI1.jpg",
+// HAI — sólo tarjetas originales de las fuentes entregadas; null muestra el código
+"HAI1": "/haiti-original/HAI1.png",
+"HAI2": "/haiti-original/HAI2.png",
+"HAI3": "/haiti-original/HAI3.png",
+"HAI4": "/haiti-original/HAI4.png",
+"HAI5": "/haiti-original/HAI5.png",
+"HAI6": "/haiti-original/HAI6.png",
+"HAI7": "/haiti-original/HAI7.png",
+"HAI8": null,
+"HAI9": "/haiti-original/HAI9.png",
+"HAI10": "/haiti-original/HAI10.png",
+"HAI11": "/haiti-original/HAI11.png",
+"HAI12": "/haiti-original/HAI12.png",
+"HAI13": null,
+"HAI14": "/haiti-original/HAI14.png",
+"HAI15": "/haiti-original/HAI15.png",
+"HAI16": "/haiti-original/HAI16.png",
+"HAI17": "/haiti-original/HAI17.png",
+"HAI18": "/haiti-original/HAI18.png",
+"HAI19": "/haiti-original/HAI19.png",
+"HAI20": "/haiti-original/HAI20.png",
 
 // IRN — material real validado
 "IRN1": "/stickers/IRN1.jpg",
