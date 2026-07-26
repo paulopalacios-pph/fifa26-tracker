@@ -145,16 +145,12 @@ function App() {
       duplicate_count: Number(patch.duplicate_count ?? current.duplicate_count ?? 0),
       updated_at: new Date().toISOString()
     }
-    if (next.is_temporary) {
-      next.is_missing = true
-      next.duplicate_count = 0
-    }
-    if (next.is_missing) next.duplicate_count = 0
     if (next.duplicate_count > 0) {
       next.is_missing = false
       next.is_temporary = false
     }
-    if (!next.is_missing) next.is_temporary = false
+    if (next.is_missing) next.duplicate_count = 0
+    else next.is_temporary = false
     const { data, error } = await supabase.from('user_stickers').upsert(next, { onConflict: 'user_id,sticker_id' }).select().single()
     if (!error && data) setStatus(prev => ({ ...prev, [sticker.id]: data }))
   }
