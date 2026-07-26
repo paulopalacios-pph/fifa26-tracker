@@ -141,11 +141,20 @@ function App() {
       user_id: session.user.id,
       sticker_id: sticker.id,
       is_missing: Boolean(patch.is_missing ?? current.is_missing ?? false),
+      is_temporary: Boolean(patch.is_temporary ?? current.is_temporary ?? false),
       duplicate_count: Number(patch.duplicate_count ?? current.duplicate_count ?? 0),
       updated_at: new Date().toISOString()
     }
+    if (next.is_temporary) {
+      next.is_missing = true
+      next.duplicate_count = 0
+    }
     if (next.is_missing) next.duplicate_count = 0
-    if (next.duplicate_count > 0) next.is_missing = false
+    if (next.duplicate_count > 0) {
+      next.is_missing = false
+      next.is_temporary = false
+    }
+    if (!next.is_missing) next.is_temporary = false
     const { data, error } = await supabase.from('user_stickers').upsert(next, { onConflict: 'user_id,sticker_id' }).select().single()
     if (!error && data) setStatus(prev => ({ ...prev, [sticker.id]: data }))
   }
@@ -298,7 +307,19 @@ function App() {
 
       {!loading && tab === 'quick' && <section className="panel"><h1>Carga rápida</h1><p>Ejemplos: <b>MEX 2,5,7-9</b> o <b>ARG 3x2,10x3</b></p><textarea value={quickText} onChange={e => setQuickText(e.target.value)} placeholder={'MEX 2,5,7-9\nARG 3x2,10x3'} /><button className="danger" onClick={() => applyQuick('missing')}>Marcar faltantes</button><button className="primary" onClick={() => applyQuick('duplicate')}>Registrar repetidas</button></section>}
 
-      {!loading && tab === 'missing' && <ListPage title="Faltantes" rows={missing} status={status} teams={teams} empty="No tienes faltantes registrados." action={<button className="primary" onClick={exportMissingPdf}><Share2 size={16}/> Exportar PDF</button>} />}
+      {!loading && tab === 'missing' && <ListPage
+        title="Faltantes"
+        rows={missing}
+        status={status}
+        teams={teams}
+        empty="No tienes faltantes registrados."
+        action={<button className="primary" onClick={exportMissingPdf}><Share2 size={16}/> Exportar PDF</button>}
+        onToggleTemporary={sticker => upsertStatus(sticker, {
+          is_missing: true,
+          is_temporary: !Boolean(status[sticker.id]?.is_temporary),
+          duplicate_count: 0
+        })}
+      />}
       {!loading && tab === 'dupes' && <ListPage title="Mis repetidas" rows={duplicates} status={status} teams={teams} empty="No tienes repetidas registradas." />}
       {!loading && tab === 'settings' && <section className="panel"><h1>Ajustes</h1><p>Usuario: {session.user.user_metadata?.user_name || session.user.email}</p><button className="primary" onClick={exportMissingPdf}><Share2 size={16}/> Exportar faltantes</button></section>}
     </main>
@@ -343,14 +364,27 @@ function StickerCard({ sticker, row, onUpdate }) {
   </button>
 }
 
-function ListPage({ title, rows, status, teams, empty, action }) {
+function ListPage({ title, rows, status, teams, empty, action, onToggleTemporary }) {
   const grouped = rows.reduce((acc, s) => {
     const team = teams.find(t => t.id === s.team_id)
     const key = team ? `${team.name} (${team.code})` : s.prefix
     ;(acc[key] ||= []).push(s)
     return acc
   }, {})
-  return <section className="panel"><div className="listHeader"><h1>{title}</h1>{action}</div>{rows.length === 0 && <p>{empty}</p>}{Object.entries(grouped).map(([team, items]) => <div key={team} className="group"><h3>{team}</h3>{items.map(s => <div className="listRow" key={s.id}><span>{s.code}</span><b>{s.display_name || s.player_name || 'Figurita'}</b><em>{status[s.id]?.duplicate_count ? `x${status[s.id].duplicate_count}` : ''}</em></div>)}</div>)}</section>
+  return <section className="panel"><div className="listHeader"><h1>{title}</h1>{action}</div>{rows.length === 0 && <p>{empty}</p>}{Object.entries(grouped).map(([team, items]) => <div key={team} className="group"><h3>{team}</h3>{items.map(s => {
+    const temporary = Boolean(status[s.id]?.is_temporary)
+    const content = <><span>{s.code}</span><b>{s.display_name || s.player_name || 'Figurita'}</b><em>{onToggleTemporary ? (temporary ? 'Temporal' : 'Marcar temporal') : (status[s.id]?.duplicate_count ? `x${status[s.id].duplicate_count}` : '')}</em></>
+    return onToggleTemporary
+      ? <button
+          type="button"
+          className={`listRow listRowButton ${temporary ? 'temporary' : ''}`}
+          key={s.id}
+          onClick={() => onToggleTemporary(s)}
+          aria-pressed={temporary}
+          aria-label={`${s.code}: ${temporary ? 'quitar estado temporal' : 'marcar como temporal'}`}
+        >{content}</button>
+      : <div className="listRow" key={s.id}>{content}</div>
+  })}</div>)}</section>
 }
 
 createRoot(document.getElementById('root')).render(<App />)
