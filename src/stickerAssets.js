@@ -32,16 +32,27 @@ export const STICKER_ASSETS = {
 "AUS18": "/stickers/AUS18.jpg",
 "AUS19": "/stickers/AUS19.jpg",
 
-// TUR — fotos del ZIP validadas por nombre impreso
-"TUR1": "/stickers/TUR1.jpg",
-"TUR2": "/stickers/TUR2.jpg",
-"TUR3": "/stickers/TUR3.jpg",
-"TUR4": "/stickers/TUR4.jpg",
-"TUR5": "/stickers/TUR5.jpg",
-"TUR6": "/stickers/TUR6.jpg",
-"TUR7": "/stickers/TUR7.jpg",
-"TUR9": "/stickers/TUR9.jpg",
-"TUR12": "/stickers/TUR12.jpg",
+// TUR — originales validados en los PDF del álbum
+"TUR1": "/turkey-original/TUR1.png",
+"TUR2": "/turkey-original/TUR2.png",
+"TUR3": "/turkey-original/TUR3.png",
+"TUR4": "/turkey-original/TUR4.png",
+"TUR5": "/turkey-original/TUR5.png",
+"TUR6": "/turkey-original/TUR6.png",
+"TUR7": "/turkey-original/TUR7.png",
+"TUR8": "/turkey-original/TUR8.png",
+"TUR9": "/turkey-original/TUR9.png",
+"TUR10": "/turkey-original/TUR10.png",
+"TUR11": "/turkey-original/TUR11.png",
+"TUR12": "/turkey-original/TUR12.png",
+"TUR13": MISSING_STICKER,
+"TUR14": "/turkey-original/TUR14.png",
+"TUR15": "/turkey-original/TUR15.png",
+"TUR16": "/turkey-original/TUR16.png",
+"TUR17": "/turkey-original/TUR17.png",
+"TUR18": "/turkey-original/TUR18.png",
+"TUR19": "/turkey-original/TUR19.png",
+"TUR20": "/turkey-original/TUR20.png",
 // ALG — fotos reales validadas visualmente (álbum, 16 láminas). null = sin lámina.
 "ALG1": "/algeria/ALG01.jpg", // Algeria Crest
 "ALG2": "/algeria/ALG04.jpg", // Alexis Guendouz
