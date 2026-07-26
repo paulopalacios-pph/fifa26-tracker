@@ -459,26 +459,27 @@ export const STICKER_ASSETS = {
 "KSA18": MISSING_STICKER, // KSA18.jpg contiene a Mohamed Amine Tougai (Argelia)
 "KSA19": "/stickers/KSA19.jpg",
 "KSA20": MISSING_STICKER, // KSA20.jpg contiene a Salem Aldawsari, no a Abdullah Alhamdan
-"MAR1": "/stickers/MAR01.png",
-"MAR2": "/stickers/MAR14.png",
-// SIN PNG DISPONIBLE - falta subir imagen para "MAR3"
-// SIN PNG DISPONIBLE - falta subir imagen para "MAR4"
-// SIN PNG DISPONIBLE - falta subir imagen para "MAR5"
-"MAR6": "/stickers/MAR15.png",
-"MAR7": "/stickers/MAR13.png",
-"MAR8": "/stickers/MAR10.png",
-"MAR9": "/stickers/MAR09.png",
-"MAR10": "/stickers/MAR12.png",
-// SIN PNG DISPONIBLE - falta subir imagen para "MAR11"
-"MAR12": "/stickers/MAR04.png",
-"MAR13": "/stickers/MAR02.png",
-"MAR14": "/stickers/MAR11.png",
-"MAR15": "/stickers/MAR08.png",
-"MAR16": "/stickers/MAR05.png",
-"MAR17": "/stickers/MAR07.png",
-// SIN PNG DISPONIBLE - falta subir imagen para "MAR18"
-"MAR19": "/stickers/MAR06.png",
-"MAR20": "/stickers/MAR03.png",
+// MAR — sólo tarjetas originales de las fuentes entregadas; null muestra el código
+"MAR1": "/morocco-original/MAR1.png",
+"MAR2": "/morocco-original/MAR2.png",
+"MAR3": null,
+"MAR4": "/morocco-original/MAR4.png",
+"MAR5": "/morocco-original/MAR5.png",
+"MAR6": "/morocco-original/MAR6.png",
+"MAR7": "/morocco-original/MAR7.png",
+"MAR8": "/morocco-original/MAR8.png",
+"MAR9": "/morocco-original/MAR9.png",
+"MAR10": "/morocco-original/MAR10.png",
+"MAR11": null,
+"MAR12": "/morocco-original/MAR12.png",
+"MAR13": "/morocco-original/MAR13.png",
+"MAR14": "/morocco-original/MAR14.png",
+"MAR15": "/morocco-original/MAR15.png",
+"MAR16": "/morocco-original/MAR16.png",
+"MAR17": "/morocco-original/MAR17.png",
+"MAR18": null,
+"MAR19": "/morocco-original/MAR19.png",
+"MAR20": "/morocco-original/MAR20.png",
 "MEX1": "/stickers/MEX01.png",
 "MEX2": "/stickers/MEX03.png",
 "MEX3": "/stickers/MEX05.png",
