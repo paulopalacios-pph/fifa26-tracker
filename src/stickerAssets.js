@@ -723,8 +723,27 @@ export const STICKER_ASSETS = {
 "URU19": MISSING_STICKER, // URU19.jpg no pudo identificarse con suficiente confianza
 "URU20": MISSING_STICKER, // URU20.jpg no pudo identificarse con suficiente confianza
 
-// USA — material real validado
-"USA1": "/stickers/USA1.jpg",
+// USA — originales validados en los PDF del álbum
+"USA1": "/usa-original/USA1.png",
+"USA2": "/usa-original/USA2.png",
+"USA3": "/usa-original/USA3.png",
+"USA4": "/usa-original/USA4.png",
+"USA5": "/usa-original/USA5.png",
+"USA6": "/usa-original/USA6.png",
+"USA7": "/usa-original/USA7.png",
+"USA8": "/usa-original/USA8.png",
+"USA9": "/usa-original/USA9.png",
+"USA10": "/usa-original/USA10.png",
+"USA11": "/usa-original/USA11.png",
+"USA12": "/usa-original/USA12.png",
+"USA13": MISSING_STICKER,
+"USA14": "/usa-original/USA14.png",
+"USA15": "/usa-original/USA15.png",
+"USA16": "/usa-original/USA16.png",
+"USA17": "/usa-original/USA17.png",
+"USA18": "/usa-original/USA18.png",
+"USA19": MISSING_STICKER,
+"USA20": "/usa-original/USA20.png",
 // UZB — fotos reales validadas por nombre impreso
 "UZB1": "/stickers/UZB1.jpg",
 "UZB3": "/stickers/UZB20.jpg",
