@@ -159,7 +159,8 @@ function App() {
   const haveCount = stickers.length - missing.length
   const percent = stickers.length ? Math.round((haveCount / stickers.length) * 100) : 0
   const totalDupes = duplicates.reduce((sum, s) => sum + (status[s.id]?.duplicate_count || 0), 0)
-  const teamMissing = teamStickers.filter(s => status[s.id]?.is_missing).length
+  const teamMissingStickers = teamStickers.filter(s => status[s.id]?.is_missing)
+  const teamMissing = teamMissingStickers.length
   const teamHave = teamStickers.length - teamMissing
   const crestSticker =
     teamStickers.find(s => Number(s.sticker_number) === 1) ||
@@ -267,8 +268,26 @@ function App() {
             <div><h1>{selectedTeam?.name} <b>{selectedTeam?.code}</b></h1><p>{FLAGS[selectedTeam?.code] || '🏳️'} {teamStickers.length} figuritas</p></div>
           </div>
           <div className="countryMetrics">
-            <div><span>Álbum global</span><strong>{percent}%</strong><small>{missing.length} faltantes</small></div>
-            <div><span>{selectedTeam?.name}</span><strong>{teamHave}/{teamStickers.length}</strong><small>{teamMissing} faltantes</small></div>
+            <div><span>Álbum global</span><strong>{percent}%</strong><small>{missing.length} {missing.length === 1 ? 'faltante' : 'faltantes'}</small></div>
+            <div className="countryMissingMetric">
+              <span>{selectedTeam?.name}</span>
+              <strong>{teamHave}/{teamStickers.length}</strong>
+              <small>{teamMissing} {teamMissing === 1 ? 'faltante' : 'faltantes'}</small>
+              {teamMissingStickers.length > 0 && (
+                <div className="missingCodes" aria-label={`Láminas faltantes de ${selectedTeam?.name}`}>
+                  {teamMissingStickers.map(sticker => (
+                    <button
+                      key={sticker.id}
+                      type="button"
+                      onClick={() => upsertStatus(sticker, { is_missing: false, duplicate_count: 0 })}
+                      aria-label={`${sticker.code}: marcar como tengo`}
+                    >
+                      {sticker.code}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
           <button className="countryArrow" onClick={() => navigateTeam(1)} aria-label="País siguiente"><ArrowRight size={22}/><span>Siguiente</span></button>
         </div>
