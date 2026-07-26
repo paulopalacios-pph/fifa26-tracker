@@ -137,6 +137,7 @@ function App() {
   async function upsertStatus(sticker, patch) {
     if (!session?.user) return
     const current = status[sticker.id] || {}
+    const hadCurrent = Boolean(status[sticker.id])
     const next = {
       user_id: session.user.id,
       sticker_id: sticker.id,
@@ -151,8 +152,17 @@ function App() {
     }
     if (next.is_missing) next.duplicate_count = 0
     else next.is_temporary = false
-    const { data, error } = await supabase.from('user_stickers').upsert(next, { onConflict: 'user_id,sticker_id' }).select().single()
-    if (!error && data) setStatus(prev => ({ ...prev, [sticker.id]: data }))
+    setStatus(prev => ({ ...prev, [sticker.id]: { ...current, ...next } }))
+    const { error } = await supabase.from('user_stickers').upsert(next, { onConflict: 'user_id,sticker_id' })
+    if (error) {
+      setStatus(prev => {
+        if (prev[sticker.id]?.updated_at !== next.updated_at) return prev
+        const rolledBack = { ...prev }
+        if (hadCurrent) rolledBack[sticker.id] = current
+        else delete rolledBack[sticker.id]
+        return rolledBack
+      })
+    }
   }
 
   const orderedTeams = useMemo(() => [...teams].sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0)), [teams])
