@@ -767,8 +767,27 @@ export const STICKER_ASSETS = {
 "SUI19": "/switzerland/SUI11.jpg", // Dan Ndoye
 "SUI20": "/switzerland/SUI15.jpg", // Zeki Amdouni
 
-// SWE — material real validado
-"SWE1": "/stickers/SWE1.jpg",
+// SWE — originales validados en los PDF del álbum; null = sin original
+"SWE1": "/sweden-original/SWE1.png",
+"SWE2": "/sweden-original/SWE2.png",
+"SWE3": "/sweden-original/SWE3.png",
+"SWE4": "/sweden-original/SWE4.png",
+"SWE5": "/sweden-original/SWE5.png",
+"SWE6": "/sweden-original/SWE6.png",
+"SWE7": "/sweden-original/SWE7.png",
+"SWE8": "/sweden-original/SWE8.png",
+"SWE9": "/sweden-original/SWE9.png",
+"SWE10": "/sweden-original/SWE10.png",
+"SWE11": "/sweden-original/SWE11.png",
+"SWE12": MISSING_STICKER,
+"SWE13": MISSING_STICKER,
+"SWE14": "/sweden-original/SWE14.png",
+"SWE15": "/sweden-original/SWE15.png",
+"SWE16": "/sweden-original/SWE16.png",
+"SWE17": "/sweden-original/SWE17.png",
+"SWE18": "/sweden-original/SWE18.png",
+"SWE19": "/sweden-original/SWE19.png",
+"SWE20": "/sweden-original/SWE20.png",
 
 // TUN — material real validado
 "TUN1": "/stickers/TUN1.jpg",
