@@ -789,8 +789,27 @@ export const STICKER_ASSETS = {
 "SWE19": "/sweden-original/SWE19.png",
 "SWE20": "/sweden-original/SWE20.png",
 
-// TUN — material real validado
-"TUN1": "/stickers/TUN1.jpg",
+// TUN — originales validados en los PDF del álbum; null = sin original
+"TUN1": "/tunisia-original/TUN1.png",
+"TUN2": MISSING_STICKER,
+"TUN3": "/tunisia-original/TUN3.png",
+"TUN4": "/tunisia-original/TUN4.png",
+"TUN5": "/tunisia-original/TUN5.png",
+"TUN6": "/tunisia-original/TUN6.png",
+"TUN7": "/tunisia-original/TUN7.png",
+"TUN8": MISSING_STICKER,
+"TUN9": "/tunisia-original/TUN9.png",
+"TUN10": "/tunisia-original/TUN10.png",
+"TUN11": "/tunisia-original/TUN11.png",
+"TUN12": MISSING_STICKER,
+"TUN13": MISSING_STICKER,
+"TUN14": "/tunisia-original/TUN14.png",
+"TUN15": "/tunisia-original/TUN15.png",
+"TUN16": "/tunisia-original/TUN16.png",
+"TUN17": "/tunisia-original/TUN17.png",
+"TUN18": "/tunisia-original/TUN18.png",
+"TUN19": "/tunisia-original/TUN19.png",
+"TUN20": "/tunisia-original/TUN20.png",
 
 // URU — fotos reales validadas por nombre impreso
 "URU1": "/stickers/URU1.jpg",
