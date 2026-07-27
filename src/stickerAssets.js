@@ -119,27 +119,27 @@ export const STICKER_ASSETS = {
 "AUT19": "/austria/AUT02.png", // Michael Gregoritsch
 "AUT20": null, // Marko Arnautović — sin lámina
 
-// BEL — fotos reales validadas visualmente (álbum, 16 láminas). null = sin lámina.
-"BEL1": "/belgium/BEL01.png", // Belgium Crest
-"BEL2": null, // Thibaut Courtois — sin lámina
-"BEL3": "/belgium/BEL04.png", // Arthur Theate
-"BEL4": "/belgium/BEL10.png", // Timothy Castagne
-"BEL5": "/belgium/BEL07.png", // Zeno Debast
-"BEL6": "/belgium/BEL03.png", // Brandon Mechele
-"BEL7": "/belgium/BEL12.png", // Maxim De Cuyper
-"BEL8": "/belgium/BEL09.png", // Thomas Meunier
-"BEL9": "/belgium/BEL08.png", // Youri Tielemans
-"BEL10": "/belgium/BEL05.png", // Amadou Onana
-"BEL11": "/belgium/BEL14.png", // Nicolas Raskin
-"BEL12": "/belgium/BEL06.png", // Alexis Saelemaekers
-"BEL13": null, // Belgium (foto selección) — sin lámina
-"BEL14": "/belgium/BEL02.png", // Hans Vanaken
-"BEL15": "/belgium/BEL16.png", // Kevin De Bruyne
-"BEL16": "/belgium/BEL15.png", // Jérémy Doku
-"BEL17": null, // Charles De Ketelaere — sin lámina
-"BEL18": null, // Leandro Trossard — sin lámina
-"BEL19": "/belgium/BEL13.png", // Loïs Openda
-"BEL20": "/belgium/BEL11.png", // Romelu Lukaku
+// BEL — originales validados en los PDF del álbum; null = sin original
+"BEL1": "/belgium-original/BEL1.png",
+"BEL2": "/belgium-original/BEL2.png",
+"BEL3": "/belgium-original/BEL3.png",
+"BEL4": "/belgium-original/BEL4.png",
+"BEL5": "/belgium-original/BEL5.png",
+"BEL6": "/belgium-original/BEL6.png",
+"BEL7": "/belgium-original/BEL7.png",
+"BEL8": "/belgium-original/BEL8.png",
+"BEL9": "/belgium-original/BEL9.png",
+"BEL10": "/belgium-original/BEL10.png",
+"BEL11": "/belgium-original/BEL11.png",
+"BEL12": "/belgium-original/BEL12.png",
+"BEL13": MISSING_STICKER,
+"BEL14": "/belgium-original/BEL14.png",
+"BEL15": "/belgium-original/BEL15.png",
+"BEL16": "/belgium-original/BEL16.png",
+"BEL17": "/belgium-original/BEL17.png",
+"BEL18": "/belgium-original/BEL18.png",
+"BEL19": "/belgium-original/BEL19.png",
+"BEL20": "/belgium-original/BEL20.png",
 
 // BIH — sólo tarjetas originales de las fuentes entregadas; null muestra el código
 "BIH1": "/bosnia-original/BIH1.png",
