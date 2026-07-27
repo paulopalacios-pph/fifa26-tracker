@@ -209,9 +209,27 @@ export const STICKER_ASSETS = {
 "CRO9": MISSING_STICKER, // CRO9.jpg contiene Kristijan Jakić, no Luka Modrić
 "CRO18": "/stickers/CRO18.jpg",
 
-// CUW — material real disponible
-"CUW1": "/stickers/CUW1.jpg",
-"CUW19": "/stickers/CUW19.jpg",
+// CUW — originales validados en los PDF del álbum
+"CUW1": "/curacao-original/CUW1.png",
+"CUW2": "/curacao-original/CUW2.png",
+"CUW3": "/curacao-original/CUW3.png",
+"CUW4": "/curacao-original/CUW4.png",
+"CUW5": "/curacao-original/CUW5.png",
+"CUW6": "/curacao-original/CUW6.png",
+"CUW7": "/curacao-original/CUW7.png",
+"CUW8": "/curacao-original/CUW8.png",
+"CUW9": "/curacao-original/CUW9.png",
+"CUW10": "/curacao-original/CUW10.png",
+"CUW11": "/curacao-original/CUW11.png",
+"CUW12": "/curacao-original/CUW12.png",
+"CUW13": MISSING_STICKER,
+"CUW14": "/curacao-original/CUW14.png",
+"CUW15": "/curacao-original/CUW15.png",
+"CUW16": "/curacao-original/CUW16.png",
+"CUW17": "/curacao-original/CUW17.png",
+"CUW18": "/curacao-original/CUW18.png",
+"CUW19": "/curacao-original/CUW19.png",
+"CUW20": "/curacao-original/CUW20.png",
 
 // CZE — sólo tarjetas originales de los PDF; null muestra el código sin foto externa
 "CZE1": "/czechia-original/CZE1.png",
