@@ -185,8 +185,27 @@ export const STICKER_ASSETS = {
 "CAN19": "/canada-original/CAN19.png",
 "CAN20": "/canada-original/CAN20.png",
 
-// CIV — material real disponible
-"CIV1": "/stickers/CIV1.jpg",
+// CIV — originales validados en los PDF del álbum
+"CIV1": "/ivory-coast-original/CIV1.png",
+"CIV2": "/ivory-coast-original/CIV2.png",
+"CIV3": "/ivory-coast-original/CIV3.png",
+"CIV4": "/ivory-coast-original/CIV4.png",
+"CIV5": "/ivory-coast-original/CIV5.png",
+"CIV6": "/ivory-coast-original/CIV6.png",
+"CIV7": "/ivory-coast-original/CIV7.png",
+"CIV8": "/ivory-coast-original/CIV8.png",
+"CIV9": "/ivory-coast-original/CIV9.png",
+"CIV10": "/ivory-coast-original/CIV10.png",
+"CIV11": "/ivory-coast-original/CIV11.png",
+"CIV12": "/ivory-coast-original/CIV12.png",
+"CIV13": MISSING_STICKER,
+"CIV14": MISSING_STICKER,
+"CIV15": "/ivory-coast-original/CIV15.png",
+"CIV16": "/ivory-coast-original/CIV16.png",
+"CIV17": "/ivory-coast-original/CIV17.png",
+"CIV18": "/ivory-coast-original/CIV18.png",
+"CIV19": "/ivory-coast-original/CIV19.png",
+"CIV20": MISSING_STICKER,
 
 // COD — material real validado por nombre impreso
 "COD1": "/stickers/COD1.jpg",
