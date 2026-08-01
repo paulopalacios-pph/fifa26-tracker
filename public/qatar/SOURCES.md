@@ -1,6 +1,7 @@
 # Qatar — procedencia de imágenes
 
-Fuente única: Album Virtual Panini Mundial 2026 (PDF oficial), página 10.
+Fuentes: Album Virtual Panini Mundial 2026 (PDF oficial), página 10; y
+TODAS LAS FIGURITAS EN PDF, página 44.
 Método: recorte directo de la lámina impresa. Ninguna imagen de internet.
 Verificación: cada código se asignó leyendo el nombre impreso en la lámina y
 cruzándolo contra player_name en Supabase (tabla stickers).
@@ -24,6 +25,11 @@ QAT17  Edmílson Junior
 QAT18  Akram Hassan Afif
 QAT19  Ahmed Al-Ganehi
 QAT20  Almoez Ali
+
+## Recortes corregidos (página 44 de TODAS LAS FIGURITAS EN PDF)
+
+Se volvieron a recortar desde la cuadrícula completa, con mayor resolución y sin
+bordes cortados: QAT4, QAT5, QAT8, QAT14, QAT15 y QAT16.
 
 ## Placeholder — sin lámina completa en el PDF → tarjeta azul/gris con código (2)
 QAT12  Hamed Fatehi
