@@ -548,15 +548,18 @@ export const STICKER_ASSETS = {
 "KOR20": "/korea/KOR20.png",
 // KSA — fotos reales validadas por nombre impreso
 "KSA1": "/stickers/KSA1.jpg",
-"KSA4": "/stickers/KSA8.jpg",
+"KSA2": "/stickers/KSA2.jpg",
+"KSA4": "/stickers/KSA4.jpg",
+"KSA6": "/stickers/KSA6.jpg",
 "KSA7": MISSING_STICKER, // KSA7.jpg contiene a Abdullah Alkhaibari, no a Moteb Alharbi
-"KSA8": MISSING_STICKER, // KSA8.jpg contiene a Saud Abdulhamid, no a Hassan Altambakti
+"KSA8": "/stickers/KSA8.jpg",
 "KSA9": "/stickers/KSA16.jpg",
 "KSA11": "/stickers/KSA7.jpg",
+"KSA12": "/stickers/KSA12.jpg",
 "KSA14": "/stickers/KSA14.jpg",
 "KSA15": "/stickers/KSA15.jpg",
 "KSA16": "/stickers/KSA20.jpg",
-"KSA18": MISSING_STICKER, // KSA18.jpg contiene a Mohamed Amine Tougai (Argelia)
+"KSA18": "/stickers/KSA18.jpg",
 "KSA19": "/stickers/KSA19.jpg",
 "KSA20": MISSING_STICKER, // KSA20.jpg contiene a Salem Aldawsari, no a Abdullah Alhamdan
 // MAR — sólo tarjetas originales de las fuentes entregadas; null muestra el código
