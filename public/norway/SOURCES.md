@@ -3,6 +3,9 @@
 Fuente: `Album Virtual Panini Mundial 2026 - PDF 100% Completo.pdf`, página 39.
 Método: recorte directo de la lámina impresa; ninguna imagen de internet.
 
+Los recortes de esta página se regeneraron a mayor resolución para eliminar
+bordes de otras láminas y cortes parciales.
+
 ## Láminas agregadas
 
 NOR2 Ørjan Nyland; NOR7 David Møller Wolfe; NOR10 Martin Ødegaard;
