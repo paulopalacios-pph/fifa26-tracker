@@ -484,17 +484,22 @@ export const STICKER_ASSETS = {
 
 // IRQ — fotos reales validadas por nombre impreso
 "IRQ1": "/stickers/IRQ1.jpg",
-"IRQ2": MISSING_STICKER, // IRQ2.jpg contiene a Youssef Amyn, no a Jalal Hassani
+"IRQ2": "/iraq/IRQ2.jpg",
 "IRQ3": "/stickers/IRQ14.jpg",
 "IRQ4": "/stickers/IRQ4.jpg",
 "IRQ5": "/stickers/IRQ17.jpg",
+"IRQ6": "/iraq/IRQ6.jpg",
 "IRQ7": "/stickers/IRQ7.jpg",
-"IRQ9": MISSING_STICKER, // IRQ9.jpg contiene a Marko Farji, no a Zidane Iqbal
+"IRQ9": "/iraq/IRQ9.jpg",
+"IRQ10": "/iraq/IRQ10.jpg",
+"IRQ11": "/iraq/IRQ11.jpg",
+"IRQ12": "/iraq/IRQ12.jpg",
 "IRQ14": "/stickers/IRQ2.jpg",
 "IRQ15": "/stickers/IRQ15.jpg",
 "IRQ16": "/stickers/IRQ9.jpg",
 "IRQ17": MISSING_STICKER, // IRQ17.jpg contiene a Akam Hashem, no a Osama Rashid
 "IRQ18": "/stickers/IRQ16.jpg",
+"IRQ20": "/iraq/IRQ20.jpg",
 
 // JOR — fotos reales validadas por nombre impreso
 "JOR1": "/stickers/JOR1.jpg",
@@ -625,21 +630,24 @@ export const STICKER_ASSETS = {
 "NED20": "/stickers/NED20.png",
 // NOR — fotos reales validadas por nombre impreso
 "NOR1": "/stickers/NOR1.jpg",
-"NOR2": MISSING_STICKER, // NOR2.jpg contiene a Kristoffer Vassbakk Ajer, no a Ørjan Nyland
+"NOR2": "/norway/NOR2.jpg",
 "NOR3": "/stickers/NOR20.jpg",
 "NOR5": "/stickers/NOR2.jpg",
 "NOR6": "/stickers/NOR18.jpg",
+"NOR7": "/norway/NOR7.jpg",
 "NOR8": "/stickers/NOR19.jpg",
 "NOR9": "/stickers/NOR8.jpg",
+"NOR10": "/norway/NOR10.jpg",
 "NOR11": "/stickers/NOR3.jpg",
 "NOR12": "/stickers/NOR12.jpg",
 "NOR13": MISSING_STICKER, // NOR13.jpg no pudo identificarse con suficiente confianza
 "NOR14": "/stickers/NOR11.jpg",
-"NOR15": MISSING_STICKER, // NOR15.jpg no pudo identificarse con suficiente confianza
+"NOR15": "/norway/NOR15.jpg",
+"NOR16": "/norway/NOR16.jpg",
 "NOR17": "/stickers/NOR5.jpg",
 "NOR18": MISSING_STICKER, // NOR18.jpg contiene a Marcus Holmgren Pedersen, no a Jørgen Strand Larsen
-"NOR19": MISSING_STICKER, // NOR19.jpg contiene a Torbjørn Heggem, no a Antonio Nusa
-"NOR20": MISSING_STICKER, // NOR20.jpg contiene a Julian Ryerson, no a Oscar Bobb
+"NOR19": "/norway/NOR19.jpg",
+"NOR20": "/norway/NOR20.jpg",
 
 // NZL — material real validado
 "NZL1": "/stickers/NZL1.jpg",
@@ -849,20 +857,22 @@ export const STICKER_ASSETS = {
 
 // URU — fotos reales validadas por nombre impreso
 "URU1": "/stickers/URU1.jpg",
+"URU2": "/uruguay/URU2.jpg",
 "URU3": "/stickers/URU3.jpg",
+"URU4": "/uruguay/URU4.jpg",
 "URU5": "/stickers/URU14.jpg",
-"URU6": MISSING_STICKER, // URU6.jpg contiene a Nahitan Nández, no a Sebastián Cáceres
-"URU7": MISSING_STICKER, // URU7.jpg contiene a Maxi Araújo, no a Mathías Olivera
+"URU6": "/uruguay/URU6.jpg",
+"URU7": "/uruguay/URU7.jpg",
 "URU8": "/stickers/URU12.jpg",
 "URU9": "/stickers/URU6.jpg",
 "URU10": "/stickers/URU17.jpg",
-"URU12": MISSING_STICKER, // URU12.jpg contiene a Guillermo Varela, no a Rodrigo Bentancur
+"URU12": "/uruguay/URU12.jpg",
 "URU14": "/stickers/URU15.jpg",
 "URU15": MISSING_STICKER, // URU15.jpg contiene a Manuel Ugarte, no a Nicolás de la Cruz
 "URU16": "/stickers/URU7.jpg",
-"URU17": MISSING_STICKER, // URU17.jpg contiene a Federico Valverde, no a Darwin Núñez
+"URU17": "/uruguay/URU17.jpg",
 "URU19": MISSING_STICKER, // URU19.jpg no pudo identificarse con suficiente confianza
-"URU20": MISSING_STICKER, // URU20.jpg no pudo identificarse con suficiente confianza
+"URU20": "/uruguay/URU20.jpg",
 
 // USA — originales validados en los PDF del álbum
 "USA1": "/usa-original/USA1.png",
