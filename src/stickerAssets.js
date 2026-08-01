@@ -470,6 +470,17 @@ export const STICKER_ASSETS = {
 
 // IRN — material real validado
 "IRN1": "/stickers/IRN1.jpg",
+"IRN2": "/stickers/IRN2.jpg",
+"IRN5": "/stickers/IRN5.jpg",
+"IRN6": "/stickers/IRN6.jpg",
+"IRN7": "/stickers/IRN7.jpg",
+"IRN8": "/stickers/IRN8.jpg",
+"IRN11": "/stickers/IRN11.jpg",
+"IRN12": "/stickers/IRN12.jpg",
+"IRN16": "/stickers/IRN16.jpg",
+"IRN17": "/stickers/IRN17.jpg",
+"IRN18": "/stickers/IRN18.jpg",
+"IRN19": "/stickers/IRN19.jpg",
 
 // IRQ — fotos reales validadas por nombre impreso
 "IRQ1": "/stickers/IRQ1.jpg",
