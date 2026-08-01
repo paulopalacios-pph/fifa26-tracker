@@ -18,6 +18,7 @@ export const STICKER_ASSETS = {
   ...ASSET_TUR20,
 
 // AUS — fotos del ZIP validadas por nombre impreso
+"AUS1": "/stickers/AUS1.jpg",
 "AUS2": "/stickers/AUS2.jpg",
 "AUS4": "/stickers/AUS4.jpg",
 "AUS5": "/stickers/AUS5.jpg",
@@ -27,7 +28,9 @@ export const STICKER_ASSETS = {
 "AUS9": "/stickers/AUS9.jpg",
 "AUS10": "/stickers/AUS10.jpg",
 "AUS11": "/stickers/AUS11.jpg",
+"AUS12": "/stickers/AUS12.jpg",
 "AUS14": "/stickers/AUS14.jpg",
+"AUS15": "/stickers/AUS15.jpg",
 "AUS17": "/stickers/AUS17.jpg",
 "AUS18": "/stickers/AUS18.jpg",
 "AUS19": "/stickers/AUS19.jpg",
