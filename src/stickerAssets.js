@@ -685,19 +685,19 @@ export const STICKER_ASSETS = {
 "QAT1": "/qatar/QAT1.png", // Qatar Crest (escudo QFA)
 "QAT2": "/qatar/QAT2.png", // Meshaal Barsham
 "QAT3": "/qatar/QAT3.png", // Sultan Albrake
-"QAT4": null, // Lucas Mendes — sin lámina
-"QAT5": null, // Homam Ahmed — sin lámina (desmapeado QAT5.jpg de internet)
+"QAT4": "/qatar/QAT4.png", // Lucas Mendes
+"QAT5": "/qatar/QAT5.png", // Homam Ahmed
 "QAT6": "/qatar/QAT6.png", // Boualem Khoukhi
 "QAT7": "/qatar/QAT7.png", // Pedro Miguel
-"QAT8": null, // Tarek Salman — sin lámina
+"QAT8": "/qatar/QAT8.png", // Tarek Salman
 "QAT9": "/qatar/QAT9.png", // Mohammed Mannai
 "QAT10": "/qatar/QAT10.png", // Karim Boudiaf
 "QAT11": "/qatar/QAT11.png", // Assim Madibo
 "QAT12": null, // Hamed Fatehi — sin lámina
 "QAT13": null, // Foto selección Qatar — sin lámina
-"QAT14": null, // Mohammed Waad — sin lámina
-"QAT15": null, // Abdulaziz Hatem — sin lámina
-"QAT16": null, // Hassan Al-Haydos — sin lámina
+"QAT14": "/qatar/QAT14.png", // Mohammed Waad
+"QAT15": "/qatar/QAT15.png", // Abdulaziz Hatem
+"QAT16": "/qatar/QAT16.png", // Hassan Al-Haydos
 "QAT17": "/qatar/QAT17.png", // Edmílson Junior
 "QAT18": "/qatar/QAT18.png", // Akram Hassan Afif
 "QAT19": "/qatar/QAT19.png", // Ahmed Al-Ganehi
