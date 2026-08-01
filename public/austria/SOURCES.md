@@ -23,8 +23,11 @@ AUT17 → AUT15  Patrick Wimmer
 AUT18 → AUT03  Christoph Baumgartner
 AUT19 → AUT02  Michael Gregoritsch
 
-## Sin lámina en el álbum → null / tarjeta con código (4)
+## Láminas recuperadas de la página 42 del álbum
+
+- AUT14 — Florian Grillitsch
+- AUT20 — Marko Arnautović
+
+## Sin lámina en el álbum → null / tarjeta con código (2)
 AUT8   Philipp Mwene
 AUT13  Austria (foto selección)
-AUT14  Florian Grillitsch
-AUT20  Marko Arnautović

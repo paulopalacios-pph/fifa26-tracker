@@ -63,7 +63,7 @@ export const STICKER_ASSETS = {
 "ALG4": "/algeria/ALG11.jpg", // Youcef Atal
 "ALG5": "/algeria/ALG15.jpg", // Rayan Aït-Nouri
 "ALG6": null, // Mohamed Amine — sin lámina
-"ALG7": null, // Aïssa Mandi — sin lámina
+"ALG7": "/algeria/ALG07_AissaMandi.jpg", // Aïssa Mandi
 "ALG8": "/algeria/ALG05.jpg", // Ismaël Bennacer
 "ALG9": "/algeria/ALG16.jpg", // Houssem Aouar
 "ALG10": "/algeria/ALG02.jpg", // Hicham Boudaoui
@@ -76,7 +76,7 @@ export const STICKER_ASSETS = {
 "ALG17": "/algeria/ALG06.jpg", // Anis Hadj Moussa
 "ALG18": "/algeria/ALG12.jpg", // Amine Gouiri
 "ALG19": "/algeria/ALG08.jpg", // Baghdad Bounedjah
-"ALG20": null, // Mohammed Amoura — sin lámina
+"ALG20": "/algeria/ALG20_MohammedAmoura.jpg", // Mohammed Amoura
 
 // ARG — fotos reales validadas visualmente
 "ARG1": "/stickers/ARG1.jpg",
@@ -114,13 +114,13 @@ export const STICKER_ASSETS = {
 "AUT11": "/austria/AUT04.png", // Marcel Sabitzer
 "AUT12": "/austria/AUT09.png", // Konrad Laimer
 "AUT13": null, // Austria (foto selección) — sin lámina
-"AUT14": null, // Florian Grillitsch — sin lámina
+"AUT14": "/austria/AUT14_FlorianGrillitsch.png", // Florian Grillitsch
 "AUT15": "/austria/AUT13.png", // Nicolas Seiwald
 "AUT16": "/austria/AUT14.png", // Romano Schmid
 "AUT17": "/austria/AUT15.png", // Patrick Wimmer
 "AUT18": "/austria/AUT03.png", // Christoph Baumgartner
 "AUT19": "/austria/AUT02.png", // Michael Gregoritsch
-"AUT20": null, // Marko Arnautović — sin lámina
+"AUT20": "/austria/AUT20_MarkoArnautovic.png", // Marko Arnautović
 
 // BEL — originales validados en los PDF del álbum; null = sin original
 "BEL1": "/belgium-original/BEL1.png",
@@ -798,7 +798,7 @@ export const STICKER_ASSETS = {
 "SUI14": null, // Ardon Jashari — sin lámina
 "SUI15": "/switzerland/SUI12.jpg", // Johan Manzambi
 "SUI16": "/switzerland/SUI04.jpg", // Michel Aebischer
-"SUI17": null, // Breel Embolo — sin lámina
+"SUI17": "/switzerland/SUI17.jpg", // Breel Embolo
 "SUI18": "/switzerland/SUI05.jpg", // Rubén Vargas
 "SUI19": "/switzerland/SUI11.jpg", // Dan Ndoye
 "SUI20": "/switzerland/SUI15.jpg", // Zeki Amdouni

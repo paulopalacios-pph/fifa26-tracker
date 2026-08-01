@@ -24,8 +24,11 @@ SUI18 → SUI05  Rubén Vargas
 SUI19 → SUI11  Dan Ndoye
 SUI20 → SUI15  Zeki Amdouni
 
-## Sin lámina en el álbum → null / tarjeta con código (4)
+## Lámina recuperada de la página 11 del álbum
+
+- SUI17 — Breel Embolo
+
+## Sin lámina en el álbum → null / tarjeta con código (3)
 SUI3   Yvon Mvogo
 SUI13  Switzerland (foto selección)
 SUI14  Ardon Jashari
-SUI17  Breel Embolo

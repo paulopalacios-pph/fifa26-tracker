@@ -23,8 +23,11 @@ ALG17 → ALG06  Anis Hadj Moussa
 ALG18 → ALG12  Amine Gouiri
 ALG19 → ALG08  Baghdad Bounedjah
 
-## Sin lámina en el álbum → null / tarjeta con código (4)
+## Láminas recuperadas de la página 41 del álbum
+
+- ALG7 — Aïssa Mandi
+- ALG20 — Mohammed Amoura
+
+## Sin lámina en el álbum → null / tarjeta con código (2)
 ALG6   Mohamed Amine
-ALG7   Aïssa Mandi
 ALG13  Algeria (foto selección)
-ALG20  Mohammed Amoura
