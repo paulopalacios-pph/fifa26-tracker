@@ -3,6 +3,9 @@
 Fuente: `Album Virtual Panini Mundial 2026 - PDF 100% Completo.pdf`, página 38.
 Método: recorte directo de la lámina impresa; ninguna imagen de internet.
 
+Los recortes de esta página se regeneraron a mayor resolución para eliminar
+bordes de otras láminas y cortes parciales.
+
 ## Láminas agregadas
 
 IRQ2 Jalal Hassani; IRQ6 Merchas Doski; IRQ9 Zidane Iqbal;
