@@ -170,6 +170,7 @@ function App() {
   const selectedTeam = orderedTeams[selectedIndex] || orderedTeams[0]
   const teamStickers = stickers.filter(s => s.team_id === selectedTeam?.id).sort((a, b) => a.sticker_number - b.sticker_number)
   const missing = stickers.filter(s => status[s.id]?.is_missing)
+  const reserved = stickers.filter(s => status[s.id]?.is_missing && status[s.id]?.is_temporary)
   const duplicates = stickers.filter(s => (status[s.id]?.duplicate_count || 0) > 0)
   const haveCount = stickers.length - missing.length
   const percent = stickers.length ? Math.round((haveCount / stickers.length) * 100) : 0
@@ -254,7 +255,7 @@ function App() {
     <main className="content">
       {loading && <div className="panel">Cargando álbum...</div>}
 
-      {!loading && tab === 'dashboard' && <Dashboard percent={percent} haveCount={haveCount} missingCount={missing.length} totalDupes={totalDupes} teams={[...teamStats].sort((a,b)=>(a.sort_order||0)-(b.sort_order||0))} openTeam={(code) => { setSelectedTeamCode(code); setTab('album') }} />}
+      {!loading && tab === 'dashboard' && <Dashboard percent={percent} haveCount={haveCount} missingCount={missing.length} reservedCount={reserved.length} totalDupes={totalDupes} teams={[...teamStats].sort((a,b)=>(a.sort_order||0)-(b.sort_order||0))} openTeam={(code) => { setSelectedTeamCode(code); setTab('album') }} />}
 
       {!loading && tab === 'album' && <section className="countryView">
         <div className="countryHero">
@@ -334,11 +335,12 @@ function App() {
   </div>
 }
 
-function Dashboard({ percent, haveCount, missingCount, totalDupes, teams, openTeam }) {
+function Dashboard({ percent, haveCount, missingCount, reservedCount, totalDupes, teams, openTeam }) {
   return <section className="dashboard">
     <div className="dashboardTop">
       <div className="progressCard"><div className="ring" style={{ background: `conic-gradient(#2e8cff ${percent}%, #18334b 0)` }}><b>{percent}%</b></div><div><span>Completado</span><strong>{haveCount}</strong><small>figuritas registradas</small></div></div>
       <div className="metricBox"><span>Faltantes</span><b>{missingCount}</b></div>
+      <div className="metricBox reservedMetric"><span>Reservadas</span><b>{reservedCount}</b></div>
       <div className="metricBox"><span>Repetidas</span><b>{totalDupes}</b></div>
     </div>
     <div className="sectionTitle"><div><h2>Países</h2><p>Orden del álbum</p></div></div>
